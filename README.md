@@ -1,4 +1,3 @@
-```
 # proyectoIW
 
 ========================================
@@ -145,4 +144,3 @@ RELACIONES
 - Serie 1–N Valoracion
 - Serie 1–N Comentario
 - Serie N–N Genero
-```
