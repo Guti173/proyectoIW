@@ -50,12 +50,11 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="DB_Proyecto" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ProyectoIW" username="postgres" password="YWRtaW4=" cryptedPassword="true" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="DB_Proyecto" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ProyectoIW" username="postgres" password="YWRtaW4=" cryptedPassword="true" schema="public"/>
   <Entity gr:x="150" gr:y="525" id="ent1" name="Serie" duration="persistent" attributeOrder="ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11 ent1#att12 ent1#att13 ent1#att14" db:database="db1" db:table="serie">
     <Attribute id="ent1#att5" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att6" name="titulo" type="string" db:column="titulo"/>
-    <Attribute id="ent1#att7" name="descripcion" type="string" db:column="descripcion"/>
+    <Attribute id="ent1#att7" name="descripcion" type="text" db:column="descripcion"/>
     <Attribute id="ent1#att8" name="fechaEstreno" type="date" db:column="fechaestreno"/>
     <Attribute id="ent1#att9" name="fechaFin" type="date" db:column="fechafin"/>
     <Attribute id="ent1#att10" name="imagenPortada" type="url" contentType="url" db:column="imagenportada"/>
@@ -67,7 +66,7 @@
   <Entity gr:x="435" gr:y="685" id="ent2" name="Genero" duration="persistent" attributeOrder="ent2#att15 ent2#att16 ent2#att17" db:database="db1" db:table="genero">
     <Attribute id="ent2#att15" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att16" name="nombre" type="string" db:column="nombre"/>
-    <Attribute id="ent2#att17" name="descripcion" type="string" db:column="descripcion"/>
+    <Attribute id="ent2#att17" name="descripcion" type="text" db:column="descripcion"/>
   </Entity>
   <Entity gr:x="135" gr:y="350" id="ent3" name="ListaUsuario" duration="persistent" attributeOrder="ent3#att18 ent3#att19 ent3#att20" db:database="db1" db:table="listausuario">
     <Attribute id="ent3#att18" key="true" name="oid" type="integer" db:column="oid"/>
@@ -83,11 +82,11 @@
   </Entity>
   <Entity gr:x="665" gr:y="355" id="ent5" name="Valoracion" duration="persistent" attributeOrder="ent5#att26 ent5#att27" db:database="db1" db:table="valoracion">
     <Attribute id="ent5#att26" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent5#att27" name="puntuacion" type="string" db:column="puntuacion"/>
+    <Attribute id="ent5#att27" name="puntuacion" type="integer" db:column="puntuacion"/>
   </Entity>
   <Entity gr:x="910" gr:y="395" id="ent6" name="Comentario" duration="persistent" attributeOrder="ent6#att28 ent6#att29 ent6#att30 ent6#att31" db:database="db1" db:table="comentario">
     <Attribute id="ent6#att28" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent6#att29" name="contenido" type="string" db:column="contenido"/>
+    <Attribute id="ent6#att29" name="contenido" type="text" db:column="contenido"/>
     <Attribute id="ent6#att30" name="fechaPublicacion" type="date" db:column="fechapublicacion"/>
     <Attribute id="ent6#att31" name="estado" type="string" db:column="estado"/>
   </Entity>
@@ -102,7 +101,7 @@
   </Entity>
   <Entity gr:x="905" gr:y="70" id="ent9" name="ReporteComentario" duration="persistent" attributeOrder="ent9#att37 ent9#att38 ent9#att39 ent9#att40" db:database="db1" db:table="reportecomentario">
     <Attribute id="ent9#att37" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent9#att38" name="motivo" type="string" db:column="motivo"/>
+    <Attribute id="ent9#att38" name="motivo" type="text" db:column="motivo"/>
     <Attribute id="ent9#att39" name="fechaReporte" type="date" db:column="fechareporte"/>
     <Attribute id="ent9#att40" name="estado" type="string" db:column="estado"/>
   </Entity>
@@ -123,7 +122,7 @@
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel5" name="Serie_ListaUsuario" sourceEntity="ent1" targetEntity="ent3" db:database="db1" db:table="serie">
-    <RelationshipRole1 id="rel5#role9" name="SerieToListaUsuario" maxCard="1">
+    <RelationshipRole1 id="rel5#role9" name="SerieToListaUsuario" maxCard="N">
       <db:JoinColumn attribute="ent1#att5" name="oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel5#role10" name="ListaUsuarioToSerie" maxCard="N">
