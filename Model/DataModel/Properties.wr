@@ -50,8 +50,9 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="DB_Proyecto" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ProyectoIW" username="postgres" password="YWRtaW4=" cryptedPassword="true" schema="public"/>
-  <Entity gr:x="150" gr:y="525" id="ent1" name="Serie" duration="persistent" attributeOrder="ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11 ent1#att12 ent1#att13 ent1#att14" db:database="db1" db:table="serie">
+  <db:Database id="db1" name="DB_Proyecto" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ProyectoIW" username="postgres" password="YWRtaW4=" cryptedPassword="true" schema="public">
+  </db:Database>
+  <Entity gr:x="150" gr:y="525" id="ent1" name="Serie" duration="persistent" attributeOrder="ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11 ent1#att13 ent1#att14 ent1#att12" db:database="db1" db:table="serie">
     <Attribute id="ent1#att5" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att6" name="titulo" type="string" db:column="titulo"/>
     <Attribute id="ent1#att7" name="descripcion" type="text" db:column="descripcion"/>
@@ -59,9 +60,9 @@
     <Attribute id="ent1#att9" name="fechaFin" type="date" db:column="fechafin"/>
     <Attribute id="ent1#att10" name="imagenPortada" type="url" contentType="url" db:column="imagenportada"/>
     <Attribute id="ent1#att11" name="numneroEpisodios" type="integer" db:column="numneroepisodios"/>
-    <Attribute id="ent1#att12" name="estado" type="string" db:column="estado"/>
     <Attribute id="ent1#att13" name="valoracionMedia" type="float" db:column="valoracionmedia"/>
     <Attribute id="ent1#att14" name="totalValoraciones" type="integer" db:column="totalvaloraciones"/>
+    <Attribute id="ent1#att12" name="estado" type="string" db:column="estado"/>
   </Entity>
   <Entity gr:x="435" gr:y="685" id="ent2" name="Genero" duration="persistent" attributeOrder="ent2#att15 ent2#att16 ent2#att17" db:database="db1" db:table="genero">
     <Attribute id="ent2#att15" key="true" name="oid" type="integer" db:column="oid"/>
@@ -113,116 +114,116 @@
       <db:JoinColumn attribute="ent2#att15" name="genero_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel4" name="User_ListaUsuario" sourceEntity="User" targetEntity="ent3" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel4#role7" name="UserToListaUsuario" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
+  <Relationship id="rel4" name="User_ListaUsuario" sourceEntity="User" targetEntity="ent3" db:database="db1" db:table="listausuario">
+    <RelationshipRole1 id="rel4#role7" name="UserToListaUsuario" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="ListaUsuarioToUser" maxCard="N">
-      <db:JoinColumn attribute="ent3#att18" name="listausuario_oid"/>
+    <RelationshipRole2 id="rel4#role8" name="ListaUsuarioToUser" maxCard="1">
+      <db:JoinColumn attribute="ent3#att18" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel5" name="Serie_ListaUsuario" sourceEntity="ent1" targetEntity="ent3" db:database="db1" db:table="serie">
+  <Relationship id="rel5" name="Serie_ListaUsuario" sourceEntity="ent1" targetEntity="ent3" db:database="db1" db:table="serie_listausuario">
     <RelationshipRole1 id="rel5#role9" name="SerieToListaUsuario" maxCard="N">
-      <db:JoinColumn attribute="ent1#att5" name="oid"/>
+      <db:JoinColumn attribute="ent1#att5" name="serie_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel5#role10" name="ListaUsuarioToSerie" maxCard="N">
       <db:JoinColumn attribute="ent3#att18" name="listausuario_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel6" name="User_ProgresoSerie" sourceEntity="User" targetEntity="ent4" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel6#role11" name="UserToProgresoSerie" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
+  <Relationship id="rel6" name="User_ProgresoSerie" sourceEntity="User" targetEntity="ent4" db:database="db1" db:table="progresoserie">
+    <RelationshipRole1 id="rel6#role11" name="UserToProgresoSerie" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel6#role12" name="ProgresoSerieToUser" maxCard="N">
-      <db:JoinColumn attribute="ent4#att21" name="progresoserie_oid"/>
+    <RelationshipRole2 id="rel6#role12" name="ProgresoSerieToUser" maxCard="1">
+      <db:JoinColumn attribute="ent4#att21" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel7" name="Serie_ProgresoSerie" sourceEntity="ent1" targetEntity="ent4" db:database="db1" db:table="serie">
-    <RelationshipRole1 id="rel7#role13" name="SerieToProgresoSerie" maxCard="1">
-      <db:JoinColumn attribute="ent1#att5" name="oid"/>
+  <Relationship id="rel7" name="Serie_ProgresoSerie" sourceEntity="ent1" targetEntity="ent4" db:database="db1" db:table="progresoserie">
+    <RelationshipRole1 id="rel7#role13" name="SerieToProgresoSerie" maxCard="N">
+      <db:JoinColumn attribute="ent1#att5" name="serie_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel7#role14" name="ProgresoSerieToSerie" maxCard="N">
-      <db:JoinColumn attribute="ent4#att21" name="progresoserie_oid"/>
+    <RelationshipRole2 id="rel7#role14" name="ProgresoSerieToSerie" maxCard="1">
+      <db:JoinColumn attribute="ent4#att21" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel8" name="User_Valoracion" sourceEntity="User" targetEntity="ent5" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel8#role15" name="UserToValoracion" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
+  <Relationship id="rel8" name="User_Valoracion" sourceEntity="User" targetEntity="ent5" db:database="db1" db:table="valoracion">
+    <RelationshipRole1 id="rel8#role15" name="UserToValoracion" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel8#role16" name="ValoracionToUser" maxCard="N">
-      <db:JoinColumn attribute="ent5#att26" name="valoracion_oid"/>
+    <RelationshipRole2 id="rel8#role16" name="ValoracionToUser" maxCard="1">
+      <db:JoinColumn attribute="ent5#att26" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel9" name="Serie_Valoracion" sourceEntity="ent1" targetEntity="ent5" db:database="db1" db:table="serie">
-    <RelationshipRole1 id="rel9#role17" name="SerieToValoracion" maxCard="1">
-      <db:JoinColumn attribute="ent1#att5" name="oid"/>
+  <Relationship id="rel9" name="Serie_Valoracion" sourceEntity="ent1" targetEntity="ent5" db:database="db1" db:table="valoracion">
+    <RelationshipRole1 id="rel9#role17" name="SerieToValoracion" maxCard="N">
+      <db:JoinColumn attribute="ent1#att5" name="serie_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel9#role18" name="ValoracionToSerie" maxCard="N">
-      <db:JoinColumn attribute="ent5#att26" name="valoracion_oid"/>
+    <RelationshipRole2 id="rel9#role18" name="ValoracionToSerie" maxCard="1">
+      <db:JoinColumn attribute="ent5#att26" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel10" name="User_Comentario" sourceEntity="User" targetEntity="ent6" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel10#role19" name="UserToComentario" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
+  <Relationship id="rel10" name="User_Comentario" sourceEntity="User" targetEntity="ent6" db:database="db1" db:table="comentario">
+    <RelationshipRole1 id="rel10#role19" name="UserToComentario" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel10#role20" name="ComentarioToUser" maxCard="N">
-      <db:JoinColumn attribute="ent6#att28" name="comentario_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel11" name="Serie_Comentario" sourceEntity="ent1" targetEntity="ent6" db:database="db1" db:table="serie">
-    <RelationshipRole1 id="rel11#role21" name="SerieToComentario" maxCard="1">
-      <db:JoinColumn attribute="ent1#att5" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel11#role22" name="ComentarioToSerie" maxCard="N">
-      <db:JoinColumn attribute="ent6#att28" name="comentario_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel12" name="User_LikeComentario" sourceEntity="User" targetEntity="ent7" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel12#role23" name="UserToLikeComentario" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel12#role24" name="LikeComentarioToUser" maxCard="N">
-      <db:JoinColumn attribute="ent7#att32" name="likecomentario_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel13" name="Comentario_LikeComentario" sourceEntity="ent6" targetEntity="ent7" db:database="db1" db:table="comentario">
-    <RelationshipRole1 id="rel13#role25" name="ComentarioToLikeComentario" maxCard="1">
+    <RelationshipRole2 id="rel10#role20" name="ComentarioToUser" maxCard="1">
       <db:JoinColumn attribute="ent6#att28" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel13#role26" name="LikeComentarioToComentario" maxCard="N">
-      <db:JoinColumn attribute="ent7#att32" name="likecomentario_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel14" name="User_ReporteComentario" sourceEntity="User" targetEntity="ent9" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel14#role27" name="UserToReporteComentario" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
+  <Relationship id="rel11" name="Serie_Comentario" sourceEntity="ent1" targetEntity="ent6" db:database="db1" db:table="comentario">
+    <RelationshipRole1 id="rel11#role21" name="SerieToComentario" maxCard="N">
+      <db:JoinColumn attribute="ent1#att5" name="serie_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel14#role28" name="ReporteComentarioToUser" maxCard="N">
-      <db:JoinColumn attribute="ent9#att37" name="reportecomentario_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel15" name="Comentario_ReporteComentario" sourceEntity="ent6" targetEntity="ent9" db:database="db1" db:table="comentario">
-    <RelationshipRole1 id="rel15#role29" name="ComentarioToReporteComentario" maxCard="1">
+    <RelationshipRole2 id="rel11#role22" name="ComentarioToSerie" maxCard="1">
       <db:JoinColumn attribute="ent6#att28" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel15#role30" name="ReporteComentarioToComentario" maxCard="N">
-      <db:JoinColumn attribute="ent9#att37" name="reportecomentario_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel16" name="User_Amistad_Solicitante" sourceEntity="User" targetEntity="ent8" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel16#role31" name="UserToAmistad" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
+  <Relationship id="rel12" name="User_LikeComentario" sourceEntity="User" targetEntity="ent7" db:database="db1" db:table="likecomentario">
+    <RelationshipRole1 id="rel12#role23" name="UserToLikeComentario" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel16#role32" name="AmistadToUser" maxCard="N">
-      <db:JoinColumn attribute="ent8#att33" name="amistad_oid"/>
+    <RelationshipRole2 id="rel12#role24" name="LikeComentarioToUser" maxCard="1">
+      <db:JoinColumn attribute="ent7#att32" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel17" name="User_Amistad_Receptor" sourceEntity="User" targetEntity="ent8" gr:bendpoints="84,-158,58,112" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel17#role33" name="UserToAmistad_2" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
+  <Relationship id="rel13" name="Comentario_LikeComentario" sourceEntity="ent6" targetEntity="ent7" db:database="db1" db:table="likecomentario">
+    <RelationshipRole1 id="rel13#role25" name="ComentarioToLikeComentario" maxCard="N">
+      <db:JoinColumn attribute="ent6#att28" name="comentario_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel17#role34" name="AmistadToUser_2" maxCard="N">
-      <db:JoinColumn attribute="ent8#att33" name="amistad_oid_2"/>
+    <RelationshipRole2 id="rel13#role26" name="LikeComentarioToComentario" maxCard="1">
+      <db:JoinColumn attribute="ent7#att32" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel14" name="User_ReporteComentario" sourceEntity="User" targetEntity="ent9" db:database="db1" db:table="reportecomentario">
+    <RelationshipRole1 id="rel14#role27" name="UserToReporteComentario" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel14#role28" name="ReporteComentarioToUser" maxCard="1">
+      <db:JoinColumn attribute="ent9#att37" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel15" name="Comentario_ReporteComentario" sourceEntity="ent6" targetEntity="ent9" db:database="db1" db:table="reportecomentario">
+    <RelationshipRole1 id="rel15#role29" name="ComentarioToReporteComentario" maxCard="N">
+      <db:JoinColumn attribute="ent6#att28" name="comentario_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel15#role30" name="ReporteComentarioToComentario" maxCard="1">
+      <db:JoinColumn attribute="ent9#att37" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel16" name="User_Amistad_Solicitante" sourceEntity="User" targetEntity="ent8" db:database="db1" db:table="amistad">
+    <RelationshipRole1 id="rel16#role31" name="UserToAmistad" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel16#role32" name="AmistadToUser" maxCard="1">
+      <db:JoinColumn attribute="ent8#att33" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel17" name="User_Amistad_Receptor" sourceEntity="User" targetEntity="ent8" gr:bendpoints="84,-158,58,112" db:database="db1" db:table="amistad">
+    <RelationshipRole1 id="rel17#role33" name="UserToAmistad_2" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel17#role34" name="AmistadToUser_2" maxCard="1">
+      <db:JoinColumn attribute="ent8#att33" name="oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>
