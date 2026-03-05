@@ -1,0 +1,108 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page6" name="GestionGeneros" gr:x="155" gr:y="775" landmark="true">
+  <ContentUnits>
+    <IndexUnit id="sv3#page6#inu5" name="Generos" linkOrder="sv3#page6#inu5#ln8 sv3#page6#inu5#ln21" gr:x="0" gr:y="0" entity="ent2" displayAttributes="ent2#att15 ent2#att16 ent2#att17">
+      <Link id="sv3#page6#inu5#ln8" name="Eliminar" to="sv3#dlu1" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page6#inu5#ln21" name="actualizar" to="sv3#seu7" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+    <EntryUnit id="sv3#page6#enu4" name="NuevoGenero" linkOrder="sv3#page6#enu4#ln10" gr:x="205" gr:y="5" fieldOrder="sv3#page6#enu4#fld7 sv3#page6#enu4#fld8 sv3#page6#enu4#fld27" entity="ent2">
+      <Field id="sv3#page6#enu4#fld7" name="oid" type="string" modifiable="false" preloaded="true"/>
+      <Link id="sv3#page6#enu4#ln10" name="Aceptar" to="sv3#inn1" type="normal" validate="true">
+        <LinkParameter id="sv3#page6#enu4#ln10#par52" name="oid_Input" source="sv3#page6#enu4#fld7" target="sv3#inn1.isnotnull"/>
+      </Link>
+      <Link id="sv3#page6#enu4#ln11" name="Flow9" to="sv3#mfu1" type="transport" validate="true">
+        <LinkParameter id="sv3#page6#enu4#ln11#par53" name="Productos Object_Productos Object" source="entityBean" target="sv3#mfu1.entityBeans"/>
+        <LinkParameter id="sv3#page6#enu4#ln11#par89" name="descripcion_descripcion" source="sv3#page6#enu4#fld27" target="sv3#mfu1.ent2#att17"/>
+        <LinkParameter id="sv3#page6#enu4#ln11#par90" name="oid_KeyCondition6 [oid]" source="sv3#page6#enu4#fld7" target="sv3#mfu1#su8#kcond6.ent2#att15"/>
+        <LinkParameter id="sv3#page6#enu4#ln11#par91" name="nombre_nombre" source="sv3#page6#enu4#fld8" target="sv3#mfu1.ent2#att16"/>
+      </Link>
+      <Link id="sv3#page6#enu4#ln12" name="Flow10" to="sv3#cru2" type="transport" validate="true">
+        <LinkParameter id="sv3#page6#enu4#ln12#par63" name="Productos Object_Productos Object" source="entityBean" target="sv3#cru2.entityBeans"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par64" name="descripci&#243;n_descripci&#243;n" source="sv3#page6#enu4#fld11" target="sv3#cru2.ent1#att8"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par65" name="descripcion_descripcion" source="sv3#page6#enu4#fld10" target="sv3#cru2.ent1#att7"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par66" name="estado_estado" source="sv3#page6#enu4#fld26" target="sv3#cru2.ent1#att12"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par67" name="fehcaFin_fechaFin" source="sv3#page6#enu4#fld21" target="sv3#cru2.ent1#att9"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par68" name="imagenPortada_imagenPortada" source="sv3#page6#enu4#fld22" target="sv3#cru2.ent1#att10"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par69" name="numeroepisodios_numneroEpisodios" source="sv3#page6#enu4#fld23" target="sv3#cru2.ent1#att11"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par70" name="oid_oid" source="sv3#page6#enu4#fld7" target="sv3#cru2.ent1#att5"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par71" name="Titulo_titulo" source="sv3#page6#enu4#fld8" target="sv3#cru2.ent1#att6"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par72" name="totalvaloraciones_totalValoraciones" source="sv3#page6#enu4#fld25" target="sv3#cru2.ent1#att14"/>
+        <LinkParameter id="sv3#page6#enu4#ln12#par73" name="valoraci&#243;nMedia_valoracionMedia" source="sv3#page6#enu4#fld24" target="sv3#cru2.ent1#att13"/>
+      </Link>
+      <Field id="sv3#page6#enu4#fld8" name="nombre" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page6#enu4#fld27" name="descripcion" type="text" modifiable="true" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page6#inu5">
+          <layout:Attribute attribute="ent2#att15"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Link link="sv3#page6#inu5#ln8"/>
+          <layout:Link link="sv3#page6#inu5#ln21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page6#enu4">
+          <layout:Link link="sv3#page6#enu4#ln10"/>
+          <layout:Field field="sv3#page6#enu4#fld7"/>
+          <layout:Field field="sv3#page6#enu4#fld8"/>
+          <layout:Field field="sv3#page6#enu4#fld27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
