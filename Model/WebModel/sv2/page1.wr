@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="90" gr:y="55" id="sv2#page1" name="Home">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="90" gr:y="55" id="sv2#page1" name="Home" landmark="true" linkVisibilityPolicy="inactive">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#page1#mssu2" name="Bienvenido">
       <Message xml:space="preserve">&#161;Bienvenido!
@@ -7,11 +7,9 @@
 Explora tu cat&#225;logo de series, guarda tu progreso episodio a episodio y descubre nuevas series por g&#233;nero y valoraci&#243;n.
 
 
-&#10145;&#65039; Empieza visitando el Cat&#225;logo
-
-&#55357;&#56592; Si ya tienes cuenta, inicia sesi&#243;n
-
-&#55356;&#56725; Si eres nuevo, reg&#237;strate en un minuto</Message>
+- Empieza visitando el Cat&#225;logo
+- Si ya tienes cuenta, inicia sesi&#243;n
+- Si eres nuevo, reg&#237;strate en un minuto</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

@@ -1,9 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="575" gr:y="30" id="sv2#page2" name="Login">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="575" gr:y="30" id="sv2#page2" name="Login" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv2#page2#enu2" name="Login" entity="User" fieldOrder="sv2#page2#enu2#fld1 sv2#page2#enu2#fld2">
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#page2#enu2" name="Login" entity="User" fieldOrder="sv2#page2#enu2#fld1 sv2#page2#enu2#fld2" linkOrder="sv2#page2#enu2#ln1">
       <Field id="sv2#page2#enu2#fld1" name="userName" type="string" modifiable="true" attribute="userName"/>
       <Field id="sv2#page2#enu2#fld2" name="password" type="password" modifiable="true" attribute="password"/>
-      <Link id="sv2#page2#enu2#ln1" name="Iniciar sesi&#243;n" to="sv2#lgu1" type="transport" validate="true">
+      <Link id="sv2#page2#enu2#ln1" name="Iniciar sesi&#243;n" to="sv2#lgu1" type="normal" validate="true">
         <LinkParameter id="sv2#page2#enu2#ln1#par1" name="userName_Username" source="sv2#page2#enu2#fld1" target="sv2#lgu1.username"/>
         <LinkParameter id="sv2#page2#enu2#ln1#par2" name="password_Password" source="sv2#page2#enu2#fld2" target="sv2#lgu1.password"/>
       </Link>
@@ -16,6 +16,7 @@
         <layout:Unit unitId="sv2#page2#enu2">
           <layout:Field field="sv2#page2#enu2#fld1"/>
           <layout:Field field="sv2#page2#enu2#fld2"/>
+          <layout:Link link="sv2#page2#enu2#ln1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
