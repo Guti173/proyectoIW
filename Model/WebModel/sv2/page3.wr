@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="965" gr:y="255" id="sv2#page3" name="Registro" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#page3#enu3" name="Registro" entity="User" linkOrder="sv2#page3#enu3#ln2">
+      <Field id="sv2#page3#enu3#fld4" name="userName" type="string" modifiable="true"/>
+      <Field id="sv2#page3#enu3#fld5" name="email" type="string" modifiable="true"/>
+      <Field id="sv2#page3#enu3#fld6" name="password" type="string" modifiable="true"/>
+      <Link id="sv2#page3#enu3#ln2" name="Registro" to="sv2#cru1" type="normal" validate="true">
+        <LinkParameter id="sv2#page3#enu3#ln2#par4" name="email_email" source="sv2#page3#enu3#fld5" target="sv2#cru1.email"/>
+        <LinkParameter id="sv2#page3#enu3#ln2#par5" name="password_password" source="sv2#page3#enu3#fld6" target="sv2#cru1.password"/>
+        <LinkParameter id="sv2#page3#enu3#ln2#par6" name="User Object_User Object" source="entityBean" target="sv2#cru1.entityBeans"/>
+        <LinkParameter id="sv2#page3#enu3#ln2#par7" name="userName_userName" source="sv2#page3#enu3#fld4" target="sv2#cru1.userName"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page3#enu3">
+          <layout:Field field="sv2#page3#enu3#fld4"/>
+          <layout:Field field="sv2#page3#enu3#fld5"/>
+          <layout:Field field="sv2#page3#enu3#fld6"/>
+          <layout:Link link="sv2#page3#enu3#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
