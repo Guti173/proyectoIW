@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Site View 1" homePage="sv1#page1" linkVisibilityPolicy="always" protected="true">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Site View 1" homePage="sv1#page1" linkVisibilityPolicy="always" protected="true" landmarks="sv1#page4 sv1#page1">
   <OperationUnits>
     <SelectorUnit gr:x="230" gr:y="50" id="sv1#seu1" name="Selector1" entity="ent1">
       <Selector id="sv1#seu1#su2" defaultPolicy="fill" booleanOperator="and">
@@ -6,5 +6,11 @@
       </Selector>
       <OKLink id="sv1#seu1#oln1" name="OKFlow1" to="sv1#page1#inu1" automaticCoupling="true"/>
     </SelectorUnit>
+    <ModifyUnit gr:x="880" gr:y="580" id="sv1#mfu2" name="Update2" entity="User">
+      <Selector id="sv1#mfu2#su18" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu2#su18#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#mfu2#oln5" name="OKFlow5" to="sv1#page4" automaticCoupling="true"/>
+    </ModifyUnit>
   </OperationUnits>
 </SiteView>

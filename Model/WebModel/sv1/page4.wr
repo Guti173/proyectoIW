@@ -1,0 +1,96 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="575" gr:y="240" id="sv1#page4" name="Mi Perfil" landmark="true">
+  <ContentUnits>
+    <SelectorUnit gr:x="195" gr:y="0" id="sv1#page4#seu5" name="SelUsuarioActual" entity="User">
+      <Link id="sv1#page4#seu5#ln7" name="Flow7" to="sv1#page4#dau4" type="transport" validate="true">
+        <LinkParameter id="sv1#page4#seu5#ln7#par11" name="oid_KeyCondition8 [oid]" source="userOIDArray" target="sv1#page4#dau4#su14#kcond8.userOID"/>
+      </Link>
+      <Selector id="sv1#page4#seu5#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page4#seu5#su15#kcond17" name="usuarioActual" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page4#seu5#ln9" name="Flow9" to="sv1#page4#enu5" type="transport" validate="true">
+        <LinkParameter id="sv1#page4#seu5#ln9#par12" name="oid_Key Condition [oid]" source="userOIDArray" target="sv1#page4#enu5.userOID"/>
+      </Link>
+    </SelectorUnit>
+    <DataUnit gr:x="225" gr:y="140" id="sv1#page4#dau4" name="Datos del perfil" entity="User" displayAttributes="userName email User#att1 User#att2 User#att3">
+      <Selector id="sv1#page4#dau4#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page4#dau4#su14#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <EntryUnit gr:x="410" gr:y="5" id="sv1#page4#enu5" name="Editar Perfil" entity="User" linkOrder="sv1#page4#enu5#ln13" fieldOrder="sv1#page4#enu5#fld11 sv1#page4#enu5#fld21 sv1#page4#enu5#fld10 sv1#page4#enu5#fld22">
+      <Field id="sv1#page4#enu5#fld10" name="email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv1#page4#enu5#fld11" name="nombre" type="string" modifiable="true" attribute="User#att1"/>
+      <Field id="sv1#page4#enu5#fld21" name="apellidos" type="string" modifiable="true" attribute="User#att2"/>
+      <Field id="sv1#page4#enu5#fld22" name="fotoPerfil" type="url" modifiable="true" contentType="url" attribute="User#att3"/>
+      <Link id="sv1#page4#enu5#ln13" name="Guardar cambios" to="sv1#mfu2" type="normal" validate="true">
+        <LinkParameter id="sv1#page4#enu5#ln13#par13" name="Key [oid]_KeyCondition16 [oid]" source="key.userOID" target="sv1#mfu2#su18#kcond16.userOID"/>
+        <LinkParameter id="sv1#page4#enu5#ln13#par15" name="apellidos_apellidos" source="sv1#page4#enu5#fld21" target="sv1#mfu2.User#att2"/>
+        <LinkParameter id="sv1#page4#enu5#ln13#par16" name="email_email" source="sv1#page4#enu5#fld10" target="sv1#mfu2.email"/>
+        <LinkParameter id="sv1#page4#enu5#ln13#par17" name="fotoPerfil_fotoPerfil" source="sv1#page4#enu5#fld22" target="sv1#mfu2.User#att3"/>
+        <LinkParameter id="sv1#page4#enu5#ln13#par19" name="nombre_nombre" source="sv1#page4#enu5#fld11" target="sv1#mfu2.User#att1"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit gr:x="0" gr:y="10" id="sv1#page4#gtu3" name="Get3" contextParameters="UserCtxParam">
+      <Link id="sv1#page4#gtu3#ln22" name="Flow22" to="sv1#page4#seu5" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page4#dau4">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att1"/>
+          <layout:Attribute attribute="User#att2"/>
+          <layout:Attribute attribute="User#att3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page4#enu5">
+          <layout:Link link="sv1#page4#enu5#ln13"/>
+          <layout:Field field="sv1#page4#enu5#fld11"/>
+          <layout:Field field="sv1#page4#enu5#fld21"/>
+          <layout:Field field="sv1#page4#enu5#fld10"/>
+          <layout:Field field="sv1#page4#enu5#fld22"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
