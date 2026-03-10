@@ -1,3 +1,21 @@
-<SiteView id="sv4" name="Site View 4">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Site View 4" landmarks="sv4#page7 sv4#page8" homePage="sv4#page7">
+  <OperationUnits>
+    <ModifyUnit id="sv4#mfu4" name="Update2" gr:x="1010" gr:y="485" entity="User">
+      <Selector id="sv4#mfu4#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#mfu4#su23#kcond19" name="KeyCondition16" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#mfu4#oln8" name="OKFlow5" to="sv4#page8" automaticCoupling="true"/>
+    </ModifyUnit>
+    <SelectorUnit id="sv4#seu6" name="Selector1" gr:x="155" gr:y="0" entity="ent1">
+      <Selector id="sv4#seu6#su24" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#seu6#su24#acond3" name="que tenga" predicate="contains" booleanOperator="or" implied="false" attributes="ent1#att6" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="sv4#seu6#oln9" name="OKFlow1" to="sv4#page7#inu6" automaticCoupling="true"/>
+    </SelectorUnit>
+    <ModifyUnit gr:x="610" gr:y="580" id="sv4#mfu6" name="Update6" entity="ent6">
+      <Selector id="sv4#mfu6#su33" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#mfu6#su33#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+  </OperationUnits>
 </SiteView>

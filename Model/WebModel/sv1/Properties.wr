@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Site View 1" homePage="sv1#page1" linkVisibilityPolicy="always" protected="true" landmarks="sv1#page4 sv1#page1 sv1#page7">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Site View 1" linkVisibilityPolicy="always" protected="true">
   <OperationUnits>
     <SelectorUnit gr:x="230" gr:y="50" id="sv1#seu1" name="Selector1" entity="ent1">
       <Selector id="sv1#seu1#su2" defaultPolicy="fill" booleanOperator="and">
@@ -12,22 +12,5 @@
       </Selector>
       <OKLink id="sv1#mfu2#oln5" name="OKFlow5" to="sv1#page4" automaticCoupling="true"/>
     </ModifyUnit>
-    <CreateUnit gr:x="-50" gr:y="1205" id="sv1#cru4" name="createLista" entity="ent3">
-      <OKLink id="sv1#cru4#oln8" name="OKFlow8" to="sv1#page7" automaticCoupling="true"/>
-    </CreateUnit>
-    <ModifyUnit gr:x="-45" gr:y="1345" id="sv1#mfu4" name="updateLista" entity="ent3">
-      <Selector id="sv1#mfu4#su23" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#mfu4#su23#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="sv1#mfu4#oln9" name="OKFlow9" to="sv1#page7" automaticCoupling="true"/>
-    </ModifyUnit>
-    <ConnectUnit gr:x="545" gr:y="730" id="sv1#cnu1" name="Connect1">
-      <SourceSelector id="sv1#cnu1#su25" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#cnu1#su25#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
-      </SourceSelector>
-      <TargetSelector id="sv1#cnu1#su26" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#cnu1#su26#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
-      </TargetSelector>
-    </ConnectUnit>
   </OperationUnits>
 </SiteView>

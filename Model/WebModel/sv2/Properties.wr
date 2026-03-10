@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Publico" homePage="sv2#page1" landmarks="sv2#page1 sv2#page5 sv2#page2 sv2#page3">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Publico" landmarks="sv2#page1 sv2#page5 sv2#page2 sv2#page3" homePage="sv2#page1">
   <OperationUnits>
     <LoginUnit gr:x="780" gr:y="75" id="sv2#lgu1" name="Login1" landmark="false">
       <KOLink id="sv2#lgu1#kln1" name="KOFlow1" to="sv2#page2#mssu1">
@@ -17,6 +17,6 @@
       </Selector>
       <OKLink id="sv2#seu2#oln2" name="OKFlow1" to="sv2#page5#inu2" automaticCoupling="true"/>
     </SelectorUnit>
-    <SetUnit gr:x="810" gr:y="175" id="sv2#stu1" name="Set1"/>
+    <SetUnit gr:x="770" gr:y="195" id="sv2#stu1" name="Set1"/>
   </OperationUnits>
 </SiteView>
