@@ -1,0 +1,73 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-20" gr:y="635" id="sv1#page8" name="GuardarSerieEnLista">
+  <ContentUnits>
+    <GetUnit gr:x="140" gr:y="5" id="sv1#page8#gtu2" name="Get2" contextParameters="UserCtxParam">
+      <Link id="sv1#page8#gtu2#ln37" name="Flow37" to="sv1#page8#seu6" type="transport" validate="true">
+        <LinkParameter id="sv1#page8#gtu2#ln37#par32" name="UserCtxParam.oid_KeyCondition21 [oid]" source="sv1#page8#gtu2.UserCtxParam" target="sv1#page8#seu6#su27#kcond21.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="0" gr:y="0" id="sv1#page8#dau6" name="DetallesSerie" entity="ent1" displayAttributes="ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att11 ent1#att12 ent1#att13 ent1#att14">
+      <Selector id="sv1#page8#dau6#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page8#dau6#su24#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <SelectorUnit gr:x="300" gr:y="0" id="sv1#page8#seu6" name="SelUsuarioActual" entity="User">
+      <Selector id="sv1#page8#seu6#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page8#seu6#su27#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page8#seu6#ln38" name="Flow38" to="sv1#page8#seu8" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="305" gr:y="130" id="sv1#page8#seu8" name="SelListasUsuario" entity="ent3">
+      <Selector id="sv1#page8#seu8#su28" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page8#seu8#su28#rcond4" name="RoleCondition4" predicate="in" implied="false" role="rel4#role7"/>
+      </Selector>
+    </SelectorUnit>
+    <EntryUnit gr:x="85" gr:y="145" id="sv1#page8#enu7" name="Guardar Serie" entity="ent1">
+      <SelectionField id="sv1#page8#enu7#sfld1" name="Elegir lista" type="string"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page8#dau6">
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Attribute attribute="ent1#att8"/>
+          <layout:Attribute attribute="ent1#att9"/>
+          <layout:Attribute attribute="ent1#att11"/>
+          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Attribute attribute="ent1#att14"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page8#enu7">
+          <layout:Field field="sv1#page8#enu7#sfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

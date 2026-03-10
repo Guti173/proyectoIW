@@ -17,8 +17,9 @@
         <LinkParameter id="sv1#page1#enu3#ln2#par1" name="Nombre de la serie_que tenga" source="sv1#page1#enu3#fld4" target="sv1#seu1#su2#acond1"/>
       </Link>
     </EntryUnit>
-    <IndexUnit gr:x="5" gr:y="260" id="sv1#page1#inu3" name="Todas Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu3#ln4">
+    <IndexUnit gr:x="5" gr:y="260" id="sv1#page1#inu3" name="Todas Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu3#ln4 sv1#page1#inu3#ln36">
       <Link id="sv1#page1#inu3#ln4" name="Mostrar" to="sv1#page1#dau1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page1#inu3#ln36" name="Guardar" to="sv1#page8" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -97,6 +98,7 @@
           <layout:Attribute attribute="ent1#att11"/>
           <layout:Attribute attribute="ent1#att13"/>
           <layout:Link link="sv1#page1#inu3#ln4"/>
+          <layout:Link link="sv1#page1#inu3#ln36"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

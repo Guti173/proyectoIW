@@ -1,0 +1,138 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="105" gr:y="1050" id="sv1#page7" name="Mis Listas" landmark="true">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="10" id="sv1#page7#gtu1" name="Get1" contextParameters="UserCtxParam">
+      <Link id="sv1#page7#gtu1#ln20" name="Flow20" to="sv1#page7#seu3" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#gtu1#ln20#par14" name="UserCtxParam.oid_usuarioActual [oid]" source="sv1#page7#gtu1.UserCtxParam" target="sv1#page7#seu3#su13#kcond7.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="195" gr:y="0" id="sv1#page7#seu3" name="SelUsuarioActual" entity="User">
+      <Selector id="sv1#page7#seu3#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page7#seu3#su13#kcond7" name="usuarioActual" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page7#seu3#ln23" name="Flow23" to="sv1#page7#inu6" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#seu3#ln23#par21" name="oid_ListasDelUsuario [oid]" source="userOIDArray" target="sv1#page7#inu6#su19#rcond1.userOID"/>
+      </Link>
+      <Link id="sv1#page7#seu3#ln33" name="Flow33" to="sv1#cru4" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#seu3#ln33#par28" name="oid_User.oid(ListaUsuarioToUser)" source="userOIDArray" target="sv1#cru4.rel4#role8.userOID"/>
+      </Link>
+    </SelectorUnit>
+    <IndexUnit gr:x="185" gr:y="155" id="sv1#page7#inu6" name="Mis Listas" entity="ent3" displayAttributes="ent3#att19 ent3#att20" linkOrder="sv1#page7#inu6#ln24">
+      <Selector id="sv1#page7#inu6#su19" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page7#inu6#su19#rcond1" name="ListasDelUsuario" predicate="in" implied="false" role="rel4#role7"/>
+      </Selector>
+      <Link id="sv1#page7#inu6#ln24" name="Detalles" to="sv1#page7#dau5" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#inu6#ln24#par23" name="oid_KeyCondition13 [oid]" source="data[].ent3#att18" target="sv1#page7#dau5#su20#kcond13.ent3#att18"/>
+      </Link>
+    </IndexUnit>
+    <DataUnit gr:x="425" gr:y="155" id="sv1#page7#dau5" name="detalleLista" entity="ent3" displayAttributes="ent3#att19 ent3#att20">
+      <Selector id="sv1#page7#dau5#su20" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page7#dau5#su20#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page7#dau5#ln25" name="Flow25" to="sv1#page7#inu8" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#dau5#ln25#par24" name="oid_SeriesDeEstaLista [oid]" source="data.ent3#att18" target="sv1#page7#inu8#su22#rcond2.ent3#att18"/>
+      </Link>
+      <Link id="sv1#page7#dau5#ln31" name="Editar Lista" to="sv1#page7#enu6" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#dau5#ln31#par25" name="oid_Key Condition [oid]" source="data.ent3#att18" target="sv1#page7#enu6.ent3#att18"/>
+      </Link>
+    </DataUnit>
+    <IndexUnit gr:x="405" gr:y="300" id="sv1#page7#inu8" name="Series de la Lista" entity="ent1" displayAttributes="ent1#att6 ent1#att8 ent1#att10 ent1#att13">
+      <Selector id="sv1#page7#inu8#su22" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page7#inu8#su22#rcond2" name="SeriesDeEstaLista" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+    </IndexUnit>
+    <EntryUnit gr:x="195" gr:y="310" id="sv1#page7#enu6" name="A&#241;adir/Editar" entity="ent3" linkOrder="sv1#page7#enu6#ln32 sv1#page7#enu6#ln35">
+      <Field id="sv1#page7#enu6#fld23" name="Nombre" type="string" modifiable="true" attribute="ent3#att19"/>
+      <Link id="sv1#page7#enu6#ln32" name="Crear Lista" to="sv1#cru4" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#enu6#ln32#par26" name="tipoLista_tipoLista" source="sv1#page7#enu6#fld23" target="sv1#cru4.ent3#att19"/>
+      </Link>
+      <Link id="sv1#page7#enu6#ln35" name="Guardar Cambios" to="sv1#mfu4" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#enu6#ln35#par30" name="Key [oid]_KeyCondition15 [oid]" source="key.ent3#att18" target="sv1#mfu4#su23#kcond15.ent3#att18"/>
+        <LinkParameter id="sv1#page7#enu6#ln35#par31" name="tipoLista_tipoLista" source="sv1#page7#enu6#fld23" target="sv1#mfu4.ent3#att19"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#inu6">
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Link link="sv1#page7#inu6#ln24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#dau5">
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Attribute attribute="ent3#att20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#inu8">
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att8"/>
+          <layout:Attribute attribute="ent1#att10"/>
+          <layout:Attribute attribute="ent1#att13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#enu6">
+          <layout:Field field="sv1#page7#enu6#fld23"/>
+          <layout:Link link="sv1#page7#enu6#ln32"/>
+          <layout:Link link="sv1#page7#enu6#ln35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv1#page7#var1" name="mostrarFormLista" type="boolean" value="false"/>
+  <Variable id="sv1#page7#var2" name="modoEdicionLista" type="boolean" value="false"/>
+</Page>
