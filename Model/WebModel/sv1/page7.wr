@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="105" gr:y="1050" id="sv1#page7" name="Mis Listas" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="10" gr:y="790" id="sv1#page7" name="Mis Listas" landmark="true">
   <ContentUnits>
     <GetUnit gr:x="0" gr:y="10" id="sv1#page7#gtu1" name="Get1" contextParameters="UserCtxParam">
       <Link id="sv1#page7#gtu1#ln20" name="Flow20" to="sv1#page7#seu3" type="transport" validate="true">
@@ -12,8 +12,8 @@
       <Link id="sv1#page7#seu3#ln23" name="Flow23" to="sv1#page7#inu6" type="transport" validate="true">
         <LinkParameter id="sv1#page7#seu3#ln23#par21" name="oid_ListasDelUsuario [oid]" source="userOIDArray" target="sv1#page7#inu6#su19#rcond1.userOID"/>
       </Link>
-      <Link id="sv1#page7#seu3#ln33" name="Flow33" to="sv1#cru4" type="transport" validate="true">
-        <LinkParameter id="sv1#page7#seu3#ln33#par28" name="oid_User.oid(ListaUsuarioToUser)" source="userOIDArray" target="sv1#cru4.rel4#role8.userOID"/>
+      <Link id="sv1#page7#seu3#ln50" name="Flow50" to="sv1#cru6" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#seu3#ln50#par79" name="oid_User.oid(ListaUsuarioToUser)" source="userOIDArray" target="sv1#cru6.rel4#role8.userOID"/>
       </Link>
     </SelectorUnit>
     <IndexUnit gr:x="185" gr:y="155" id="sv1#page7#inu6" name="Mis Listas" entity="ent3" displayAttributes="ent3#att19 ent3#att20" linkOrder="sv1#page7#inu6#ln24">
@@ -40,14 +40,14 @@
         <RelationshipRoleCondition id="sv1#page7#inu8#su22#rcond2" name="SeriesDeEstaLista" predicate="in" implied="false" role="rel5#role10"/>
       </Selector>
     </IndexUnit>
-    <EntryUnit gr:x="195" gr:y="310" id="sv1#page7#enu6" name="A&#241;adir/Editar" entity="ent3" linkOrder="sv1#page7#enu6#ln32 sv1#page7#enu6#ln35">
+    <EntryUnit gr:x="195" gr:y="310" id="sv1#page7#enu6" name="A&#241;adir/Editar" entity="ent3" linkOrder="sv1#page7#enu6#ln49 sv1#page7#enu6#ln51">
       <Field id="sv1#page7#enu6#fld23" name="Nombre" type="string" modifiable="true" attribute="ent3#att19"/>
-      <Link id="sv1#page7#enu6#ln32" name="Crear Lista" to="sv1#cru4" type="normal" validate="true">
-        <LinkParameter id="sv1#page7#enu6#ln32#par26" name="tipoLista_tipoLista" source="sv1#page7#enu6#fld23" target="sv1#cru4.ent3#att19"/>
+      <Link id="sv1#page7#enu6#ln49" name="Crear Lista" to="sv1#cru6" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#enu6#ln49#par78" name="Nombre_tipoLista" source="sv1#page7#enu6#fld23" target="sv1#cru6.ent3#att19"/>
       </Link>
-      <Link id="sv1#page7#enu6#ln35" name="Guardar Cambios" to="sv1#mfu4" type="normal" validate="true">
-        <LinkParameter id="sv1#page7#enu6#ln35#par30" name="Key [oid]_KeyCondition15 [oid]" source="key.ent3#att18" target="sv1#mfu4#su23#kcond15.ent3#att18"/>
-        <LinkParameter id="sv1#page7#enu6#ln35#par31" name="tipoLista_tipoLista" source="sv1#page7#enu6#fld23" target="sv1#mfu4.ent3#att19"/>
+      <Link id="sv1#page7#enu6#ln51" name="Actualizar" to="sv1#mfu5" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#enu6#ln51#par80" name="Key [oid]_KeyCondition25 [oid]" source="key.ent3#att18" target="sv1#mfu5#su34#kcond25.ent3#att18"/>
+        <LinkParameter id="sv1#page7#enu6#ln51#par82" name="Nombre_tipoLista" source="sv1#page7#enu6#fld23" target="sv1#mfu5.ent3#att19"/>
       </Link>
     </EntryUnit>
   </ContentUnits>
@@ -116,8 +116,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page7#enu6">
           <layout:Field field="sv1#page7#enu6#fld23"/>
-          <layout:Link link="sv1#page7#enu6#ln32"/>
-          <layout:Link link="sv1#page7#enu6#ln35"/>
+          <layout:Link link="sv1#page7#enu6#ln49"/>
+          <layout:Link link="sv1#page7#enu6#ln51"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

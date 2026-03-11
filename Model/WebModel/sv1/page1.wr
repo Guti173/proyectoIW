@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="185" id="sv1#page1" name="Series" landmark="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="185" id="sv1#page1" name="Series" landmark="true">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv1#page1#inu1" name="Lista Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu1#ln1">
       <Link id="sv1#page1#inu1#ln1" name="Mostrar Serie" to="sv1#page1#dau1" type="normal" validate="true" gr:bendpoints="24,84,-91,-36" automaticCoupling="true"/>
@@ -10,6 +10,9 @@
       <Selector id="sv1#page1#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page1#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv1#page1#dau1#ln55" name="Flow55" to="sv1#cnu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#dau1#ln55#par87" name="oid_KeyCondition20 [oid] [Serie] [Source]" source="data.ent1#att5" target="sv1#cnu1#su25#kcond20.ent1#att5"/>
+      </Link>
     </DataUnit>
     <EntryUnit gr:x="190" gr:y="40" id="sv1#page1#enu3" name="Busqueda" linkOrder="sv1#page1#enu3#ln2">
       <Field id="sv1#page1#enu3#fld4" name="Nombre de la serie" type="string" modifiable="true"/>
@@ -17,10 +20,37 @@
         <LinkParameter id="sv1#page1#enu3#ln2#par1" name="Nombre de la serie_que tenga" source="sv1#page1#enu3#fld4" target="sv1#seu1#su2#acond1"/>
       </Link>
     </EntryUnit>
-    <IndexUnit gr:x="5" gr:y="260" id="sv1#page1#inu3" name="Todas Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu3#ln4 sv1#page1#inu3#ln36">
+    <IndexUnit gr:x="5" gr:y="260" id="sv1#page1#inu3" name="Todas Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu3#ln4">
       <Link id="sv1#page1#inu3#ln4" name="Mostrar" to="sv1#page1#dau1" automaticCoupling="true" type="normal" validate="true"/>
-      <Link id="sv1#page1#inu3#ln36" name="Guardar" to="sv1#page8" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
+    <GetUnit id="sv1#page1#gtu4" name="Get2" gr:x="145" gr:y="245" contextParameters="UserCtxParam">
+      <Link id="sv1#page1#gtu4#ln52" name="Flow52" to="sv1#page1#seu9" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#gtu4#ln52#par83" name="UserCtxParam.oid_KeyCondition21 [oid]" source="sv1#page1#gtu4.UserCtxParam" target="sv1#page1#seu9#su31#kcond23.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv1#page1#seu9" name="SelUsuarioActual" gr:x="330" gr:y="235" entity="User">
+      <Selector id="sv1#page1#seu9#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page1#seu9#su31#kcond23" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page1#seu9#ln53" name="Flow53" to="sv1#page1#seu10" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#seu9#ln53#par84" name="oid_RoleCondition4 [oid]" source="userOIDArray" target="sv1#page1#seu10#su32#rcond5.userOID"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv1#page1#seu10" name="SelListasUsuario" gr:x="320" gr:y="410" entity="ent3">
+      <Selector id="sv1#page1#seu10#su32" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page1#seu10#su32#rcond5" name="RoleCondition4" predicate="in" implied="false" role="rel4#role7"/>
+      </Selector>
+      <Link id="sv1#page1#seu10#ln54" name="Flow54" to="sv1#page1#enu8" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#seu10#ln54#par85" name="tipoLista_Elegir lista [label]" source="ent3#att19Array" target="sv1#page1#enu8#sfld2_label"/>
+        <LinkParameter id="sv1#page1#seu10#ln54#par86" name="oid_Elegir lista [output]" source="ent3#att18Array" target="sv1#page1#enu8#sfld2_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv1#page1#enu8" name="Guardar Serie" gr:x="145" gr:y="415" entity="ent1" linkOrder="sv1#page1#enu8#ln58">
+      <SelectionField id="sv1#page1#enu8#sfld2" name="Elegir lista" type="string"/>
+      <Link id="sv1#page1#enu8#ln58" name="Guardar serie" to="sv1#cnu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu8#ln58#par92" name="Elegir lista_KeyCondition22 [oid] [ListaUsuario] [Target]" source="sv1#page1#enu8#sfld2" target="sv1#cnu1#su26#kcond22.ent3#att18"/>
+      </Link>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -98,7 +128,25 @@
           <layout:Attribute attribute="ent1#att11"/>
           <layout:Attribute attribute="ent1#att13"/>
           <layout:Link link="sv1#page1#inu3#ln4"/>
-          <layout:Link link="sv1#page1#inu3#ln36"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu8">
+          <layout:Field field="sv1#page1#enu8#sfld2"/>
+          <layout:Link link="sv1#page1#enu8#ln58"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
