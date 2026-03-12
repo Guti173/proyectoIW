@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Site View 1" linkVisibilityPolicy="always" protected="true" landmarks="sv1#page7 sv1#page1 sv1#page4" homePage="sv1#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Site View 1" linkVisibilityPolicy="always" protected="true" landmarks="sv1#page7 sv1#page1 sv1#page4 sv1#lou2" homePage="sv1#page1" layout:pageLayout="WebRatio/Basic">
   <OperationUnits>
     <SelectorUnit gr:x="230" gr:y="50" id="sv1#seu1" name="Selector1" entity="ent1">
       <Selector id="sv1#seu1#su2" defaultPolicy="fill" booleanOperator="and">
@@ -19,6 +19,9 @@
       <TargetSelector id="sv1#cnu1#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#cnu1#su26#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
       </TargetSelector>
+      <OKLink id="sv1#cnu1#oln14" name="OKFlow14" to="sv1#page1">
+        <LinkParameter id="sv1#cnu1#oln14#par32" name="false_mostrarGuardarSerie" sourceValue="false" targetVariable="sv1#page1#var3"/>
+      </OKLink>
     </ConnectUnit>
     <CreateUnit gr:x="10" gr:y="1290" id="sv1#cru6" name="Crear Lista" entity="ent3">
       <OKLink id="sv1#cru6#oln17" name="OKFlow17" to="sv1#page7" automaticCoupling="true"/>
@@ -29,5 +32,12 @@
       </Selector>
       <OKLink id="sv1#mfu5#oln18" name="OKFlow18" to="sv1#page7" automaticCoupling="true"/>
     </ModifyUnit>
+    <DeleteUnit gr:x="505" gr:y="1300" id="sv1#dlu2" name="Eliminar" entity="ent3">
+      <Selector id="sv1#dlu2#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#dlu2#su27#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#dlu2#oln20" name="OKFlow20" to="sv1#page7" automaticCoupling="true"/>
+    </DeleteUnit>
+    <LogoutUnit gr:x="1435" gr:y="25" id="sv1#lou2" name="Cerrar sesi&#243;n" landmark="true" siteView="sv2"/>
   </OperationUnits>
 </SiteView>

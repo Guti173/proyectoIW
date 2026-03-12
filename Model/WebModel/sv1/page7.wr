@@ -24,7 +24,7 @@
         <LinkParameter id="sv1#page7#inu6#ln24#par23" name="oid_KeyCondition13 [oid]" source="data[].ent3#att18" target="sv1#page7#dau5#su20#kcond13.ent3#att18"/>
       </Link>
     </IndexUnit>
-    <DataUnit gr:x="425" gr:y="155" id="sv1#page7#dau5" name="detalleLista" entity="ent3" displayAttributes="ent3#att19 ent3#att20">
+    <DataUnit gr:x="425" gr:y="155" id="sv1#page7#dau5" name="Detalles de la Lista" entity="ent3" displayAttributes="ent3#att19 ent3#att20">
       <Selector id="sv1#page7#dau5#su20" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page7#dau5#su20#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
@@ -40,7 +40,7 @@
         <RelationshipRoleCondition id="sv1#page7#inu8#su22#rcond2" name="SeriesDeEstaLista" predicate="in" implied="false" role="rel5#role10"/>
       </Selector>
     </IndexUnit>
-    <EntryUnit gr:x="195" gr:y="310" id="sv1#page7#enu6" name="A&#241;adir/Editar" entity="ent3" linkOrder="sv1#page7#enu6#ln49 sv1#page7#enu6#ln51">
+    <EntryUnit gr:x="195" gr:y="310" id="sv1#page7#enu6" name="A&#241;adir/Editar" entity="ent3" linkOrder="sv1#page7#enu6#ln49 sv1#page7#enu6#ln51 sv1#page7#enu6#ln30">
       <Field id="sv1#page7#enu6#fld23" name="Nombre" type="string" modifiable="true" attribute="ent3#att19"/>
       <Link id="sv1#page7#enu6#ln49" name="Crear Lista" to="sv1#cru6" type="normal" validate="true">
         <LinkParameter id="sv1#page7#enu6#ln49#par78" name="Nombre_tipoLista" source="sv1#page7#enu6#fld23" target="sv1#cru6.ent3#att19"/>
@@ -48,6 +48,9 @@
       <Link id="sv1#page7#enu6#ln51" name="Actualizar" to="sv1#mfu5" type="normal" validate="true">
         <LinkParameter id="sv1#page7#enu6#ln51#par80" name="Key [oid]_KeyCondition25 [oid]" source="key.ent3#att18" target="sv1#mfu5#su34#kcond25.ent3#att18"/>
         <LinkParameter id="sv1#page7#enu6#ln51#par82" name="Nombre_tipoLista" source="sv1#page7#enu6#fld23" target="sv1#mfu5.ent3#att19"/>
+      </Link>
+      <Link id="sv1#page7#enu6#ln30" name="Eliminar" to="sv1#dlu2" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#enu6#ln30#par54" name="Key [oid]_KeyCondition26 [oid]" source="key.ent3#att18" target="sv1#dlu2#su27#kcond26.ent3#att18"/>
       </Link>
     </EntryUnit>
   </ContentUnits>
@@ -118,6 +121,7 @@
           <layout:Field field="sv1#page7#enu6#fld23"/>
           <layout:Link link="sv1#page7#enu6#ln49"/>
           <layout:Link link="sv1#page7#enu6#ln51"/>
+          <layout:Link link="sv1#page7#enu6#ln30"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

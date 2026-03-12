@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="185" id="sv1#page1" name="Series" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="185" id="sv1#page1" name="Series" landmark="true" layout:linkLayout="WRDefault/Default">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv1#page1#inu1" name="Lista Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu1#ln1">
       <Link id="sv1#page1#inu1#ln1" name="Mostrar Serie" to="sv1#page1#dau1" type="normal" validate="true" gr:bendpoints="24,84,-91,-36" automaticCoupling="true"/>
@@ -21,7 +21,10 @@
       </Link>
     </EntryUnit>
     <IndexUnit gr:x="5" gr:y="260" id="sv1#page1#inu3" name="Todas Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu3#ln4">
-      <Link id="sv1#page1#inu3#ln4" name="Mostrar" to="sv1#page1#dau1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page1#inu3#ln4" name="Mostrar" to="sv1#page1#dau1" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#inu3#ln4#par30" name="oid_KeyCondition1 [oid]" source="data[].ent1#att5" target="sv1#page1#dau1#su1#kcond1.ent1#att5"/>
+        <LinkParameter id="sv1#page1#inu3#ln4#par31" name="true_mostrarGuardarSerie" sourceValue="true" targetVariable="sv1#page1#var3"/>
+      </Link>
     </IndexUnit>
     <GetUnit id="sv1#page1#gtu4" name="Get2" gr:x="145" gr:y="245" contextParameters="UserCtxParam">
       <Link id="sv1#page1#gtu4#ln52" name="Flow52" to="sv1#page1#seu9" type="transport" validate="true">
@@ -52,7 +55,7 @@
       </Link>
     </EntryUnit>
   </ContentUnits>
-  <layout:Grid containerType="grid">
+  <layout:Grid containerType="grid" layout:frameLayout="WRDefault/Default">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page1#inu1">
@@ -87,6 +90,25 @@
           <layout:Attribute attribute="ent1#att13"/>
           <layout:Attribute attribute="ent1#att14"/>
           <layout:Attribute attribute="ent1#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu8" layout:unitLayout="WRDefault/Simple" layout:unitVisibilityConditionVariable="sv1#page1#var3">
+          <layout:Field field="sv1#page1#enu8#sfld2"/>
+          <layout:Link link="sv1#page1#enu8#ln58"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -143,12 +165,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page1#enu8">
-          <layout:Field field="sv1#page1#enu8#sfld2"/>
-          <layout:Link link="sv1#page1#enu8#ln58"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -162,4 +179,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Variable id="sv1#page1#var3" name="mostrarGuardarSerie" type="boolean" value="false"/>
 </Page>
