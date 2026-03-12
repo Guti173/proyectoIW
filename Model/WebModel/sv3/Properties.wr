@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" protected="true" landmarks="sv3#page6" homePage="sv3#seu12">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" protected="true" landmarks="sv3#page6 sv3#page7" homePage="sv3#seu12">
   <OperationUnits>
     <DeleteUnit id="sv3#dlu3" name="DeleteSerie" gr:x="420" gr:y="110" entity="ent1">
       <Selector id="sv3#dlu3#su9" defaultPolicy="fill" booleanOperator="and">
@@ -87,5 +87,32 @@
         <LinkParameter id="sv3#seu12#oln19#par167" name="valoracionMedia_PASSING_valoraci&#243;nMedia" sourceLinkParameter="sv3#seu4#oln16#par157" target="sv3#page3#enu3#fld18_slot"/>
       </OKLink>
     </SelectorUnit>
+    <SelectorUnit id="sv3#seu3" name="Selector1" gr:x="710" gr:y="1125" entity="ent1">
+      <Selector id="sv3#seu3#su20" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#seu3#su20#acond3" name="que tenga" predicate="contains" booleanOperator="or" implied="false" attributes="ent1#att6" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="sv3#seu3#oln8" name="OKFlow1" to="sv3#page7#inu6" automaticCoupling="true"/>
+    </SelectorUnit>
+    <DeleteUnit gr:x="380" gr:y="1095" id="sv3#dlu2" name="BorrarComentario" entity="ent6">
+      <Selector id="sv3#dlu2#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#dlu2#su24#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#dlu2#oln9" name="OKFlow9" to="sv3#page7" automaticCoupling="true"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="100" gr:y="1365" id="sv3#dlu4" name="DesestimarReporte" entity="ent9">
+      <Selector id="sv3#dlu4#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#dlu4#su25#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#dlu4#oln14" name="OKFlow14" to="sv3#page7" automaticCoupling="true"/>
+    </DeleteUnit>
+    <ModifyUnit gr:x="10" gr:y="1135" id="sv3#mfu4" name="AceptarReporte" entity="ent9">
+      <Selector id="sv3#mfu4#su26" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#mfu4#su26#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel15#role30.ent6#att28"/>
+      </Selector>
+      <OKLink id="sv3#mfu4#oln17" name="OKFlow17" to="sv3#dlu2">
+        <LinkParameter id="sv3#mfu4#oln17#par31" name="oid_PASSING" source="ent9#att37Array" passing="true"/>
+        <LinkParameter id="sv3#mfu4#oln17#par59" name="oid_PASSING_KeyCondition15 [oid]" target="sv3#dlu2#su24#kcond15.ent6#att28" sourceLinkParameter="sv3#page7#inu9#ln33#par58"/>
+      </OKLink>
+    </ModifyUnit>
   </OperationUnits>
 </SiteView>
