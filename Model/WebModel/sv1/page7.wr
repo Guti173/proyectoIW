@@ -15,6 +15,12 @@
       <Link id="sv1#page7#seu3#ln50" name="Flow50" to="sv1#cru6" type="transport" validate="true">
         <LinkParameter id="sv1#page7#seu3#ln50#par79" name="oid_User.oid(ListaUsuarioToUser)" source="userOIDArray" target="sv1#cru6.rel4#role8.userOID"/>
       </Link>
+      <Link id="sv1#page7#seu3#ln38" name="Flow38" to="sv1#page7#seu8" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#seu3#ln38#par61" name="oid_ProgresoDelUsuario [oid]" source="userOIDArray" target="sv1#page7#seu8#su35#rcond6.userOID"/>
+      </Link>
+      <Link id="sv1#page7#seu3#ln48" name="Flow48" to="sv1#miu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#seu3#ln48#par109" name="oid_UserKey" source="userOIDArray" target="sv1#miu1.mov1#opm1#icu1#icp5"/>
+      </Link>
     </SelectorUnit>
     <IndexUnit gr:x="185" gr:y="155" id="sv1#page7#inu6" name="Mis Listas" entity="ent3" displayAttributes="ent3#att19 ent3#att20" linkOrder="sv1#page7#inu6#ln24">
       <Selector id="sv1#page7#inu6#su19" defaultPolicy="fill" booleanOperator="and">
@@ -35,10 +41,13 @@
         <LinkParameter id="sv1#page7#dau5#ln31#par25" name="oid_Key Condition [oid]" source="data.ent3#att18" target="sv1#page7#enu6.ent3#att18"/>
       </Link>
     </DataUnit>
-    <IndexUnit gr:x="405" gr:y="300" id="sv1#page7#inu8" name="Series de la Lista" entity="ent1" displayAttributes="ent1#att6 ent1#att8 ent1#att10 ent1#att13">
+    <IndexUnit gr:x="405" gr:y="300" id="sv1#page7#inu8" name="Series de la Lista" entity="ent1" displayAttributes="ent1#att6 ent1#att8 ent1#att10 ent1#att13" linkOrder="sv1#page7#inu8#ln36">
       <Selector id="sv1#page7#inu8#su22" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page7#inu8#su22#rcond2" name="SeriesDeEstaLista" predicate="in" implied="false" role="rel5#role10"/>
       </Selector>
+      <Link id="sv1#page7#inu8#ln36" name="Detalles" to="sv1#page7#dau8" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#inu8#ln36#par60" name="oid_KeyCondition27 [oid]" source="data[].ent1#att5" target="sv1#page7#dau8#su28#kcond27.ent1#att5"/>
+      </Link>
     </IndexUnit>
     <EntryUnit gr:x="195" gr:y="310" id="sv1#page7#enu6" name="A&#241;adir/Editar" entity="ent3" linkOrder="sv1#page7#enu6#ln49 sv1#page7#enu6#ln51 sv1#page7#enu6#ln30">
       <Field id="sv1#page7#enu6#fld23" name="Nombre" type="string" modifiable="true" attribute="ent3#att19"/>
@@ -53,6 +62,44 @@
         <LinkParameter id="sv1#page7#enu6#ln30#par54" name="Key [oid]_KeyCondition26 [oid]" source="key.ent3#att18" target="sv1#dlu2#su27#kcond26.ent3#att18"/>
       </Link>
     </EntryUnit>
+    <DataUnit gr:x="665" gr:y="300" id="sv1#page7#dau8" name="Progreso de la serie" entity="ent1" displayAttributes="ent1#att6 ent1#att11 ent1#att12 ent1#att13 ent1#att14">
+      <Selector id="sv1#page7#dau8#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page7#dau8#su28#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page7#dau8#ln39" name="Flow39" to="sv1#page7#seu8" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#dau8#ln39#par62" name="oid_ProgresoDeLaSerie [oid]" source="data.ent1#att5" target="sv1#page7#seu8#su35#rcond8.ent1#att5"/>
+      </Link>
+      <Link id="sv1#page7#dau8#ln56" name="Flow56" to="sv1#miu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#dau8#ln56#par110" name="oid_SerieKey" source="data.ent1#att5" target="sv1#miu1.mov1#opm1#icu1#icp6"/>
+      </Link>
+    </DataUnit>
+    <SelectorUnit gr:x="840" gr:y="55" id="sv1#page7#seu8" name="selProgresoActual" entity="ent4">
+      <Selector id="sv1#page7#seu8#su35" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page7#seu8#su35#rcond6" name="ProgresoDelUsuario" predicate="in" implied="false" role="rel6#role11"/>
+        <RelationshipRoleCondition id="sv1#page7#seu8#su35#rcond8" name="ProgresoDeLaSerie" predicate="in" implied="false" role="rel7#role13"/>
+      </Selector>
+      <Link id="sv1#page7#seu8#ln40" name="Flow40" to="sv1#page7#enu9" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#seu8#ln40#par74" name="oid_Key Condition [oid]" source="ent4#att21Array" target="sv1#page7#enu9.ent4#att21"/>
+      </Link>
+      <Link id="sv1#page7#seu8#ln46" name="Flow46" to="sv1#miu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#seu8#ln46#par101" name="oid_ProgresoKey" source="ent4#att21Array" target="sv1#miu1.mov1#opm1#icu1#icp1"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit gr:x="870" gr:y="350" id="sv1#page7#enu9" name="Form Progreso" entity="ent4" linkOrder="sv1#page7#enu9#ln47">
+      <Field id="sv1#page7#enu9#fld29" name="episodiosVistos" type="integer" modifiable="true" attribute="ent4#att22"/>
+      <Field id="sv1#page7#enu9#fld30" name="fechaInicio" type="date" modifiable="true" attribute="ent4#att23"/>
+      <Field id="sv1#page7#enu9#fld31" name="fechaFin" type="date" modifiable="true" attribute="ent4#att24"/>
+      <Link id="sv1#page7#enu9#ln47" name="Aceptar" to="sv1#miu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#enu9#ln47#par106" name="episodiosVistos_EpisodiosVistos" source="sv1#page7#enu9#fld29" target="sv1#miu1.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv1#page7#enu9#ln47#par107" name="fechaFin_FechaFin" source="sv1#page7#enu9#fld31" target="sv1#miu1.mov1#opm1#icu1#icp4"/>
+        <LinkParameter id="sv1#page7#enu9#ln47#par108" name="fechaInicio_FechaInicio" source="sv1#page7#enu9#fld30" target="sv1#miu1.mov1#opm1#icu1#icp3"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit gr:x="1010" gr:y="435" id="sv1#page7#tmu1" name="Ahora">
+      <Link id="sv1#page7#tmu1#ln57" name="Flow57" to="sv1#miu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#tmu1#ln57#par111" name="Current/Input Timestamp_NowTs" source="currentTimestamp" target="sv1#miu1.mov1#opm1#icu1#icp7"/>
+      </Link>
+    </TimeUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -101,6 +148,7 @@
           <layout:Attribute attribute="ent1#att8"/>
           <layout:Attribute attribute="ent1#att10"/>
           <layout:Attribute attribute="ent1#att13"/>
+          <layout:Link link="sv1#page7#inu8#ln36"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -124,6 +172,63 @@
           <layout:Link link="sv1#page7#enu6#ln30"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#dau8">
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att11"/>
+          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Attribute attribute="ent1#att14"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#enu9">
+          <layout:Field field="sv1#page7#enu9#fld29"/>
+          <layout:Field field="sv1#page7#enu9#fld30"/>
+          <layout:Field field="sv1#page7#enu9#fld31"/>
+          <layout:Link link="sv1#page7#enu9#ln47"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

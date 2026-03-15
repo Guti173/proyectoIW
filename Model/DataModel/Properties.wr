@@ -50,7 +50,8 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="DB_Proyecto" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ProyectoIW" username="postgres" password="YWRtaW4=" cryptedPassword="true" schema="public"/>
+  <db:Database id="db1" name="DB_Proyecto" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ProyectoIW" username="postgres" password="YWRtaW4=" cryptedPassword="true" schema="public">
+  </db:Database>
   <Entity gr:x="150" gr:y="525" id="ent1" name="Serie" duration="persistent" attributeOrder="ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11 ent1#att12 ent1#att13 ent1#att14" db:database="db1" db:table="serie">
     <Attribute id="ent1#att5" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att6" name="titulo" type="string" db:column="titulo"/>
@@ -89,7 +90,7 @@
     <Attribute id="ent6#att29" name="contenido" type="text" db:column="contenido"/>
     <Attribute id="ent6#att30" name="fechaPublicacion" type="date" db:column="fechapublicacion"/>
     <Attribute id="ent6#att31" name="estado" type="string" db:column="estado"/>
-    <Attribute id="ent6#att42" name="contadorLikes" type="integer"/>
+    <Attribute id="ent6#att42" name="contadorLikes" type="integer" db:column="contadorlikes"/>
   </Entity>
   <Entity gr:x="765" gr:y="205" id="ent7" name="LikeComentario" duration="persistent" db:database="db1" db:table="likecomentario">
     <Attribute id="ent7#att32" key="true" name="oid" type="integer" db:column="oid"/>

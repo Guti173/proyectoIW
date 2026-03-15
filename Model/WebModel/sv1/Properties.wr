@@ -23,21 +23,25 @@
         <LinkParameter id="sv1#cnu1#oln14#par32" name="false_mostrarGuardarSerie" sourceValue="false" targetVariable="sv1#page1#var3"/>
       </OKLink>
     </ConnectUnit>
-    <CreateUnit gr:x="10" gr:y="1290" id="sv1#cru6" name="Crear Lista" entity="ent3">
+    <CreateUnit gr:x="5" gr:y="1485" id="sv1#cru6" name="Crear Lista" entity="ent3">
       <OKLink id="sv1#cru6#oln17" name="OKFlow17" to="sv1#page7" automaticCoupling="true"/>
     </CreateUnit>
-    <ModifyUnit gr:x="305" gr:y="1320" id="sv1#mfu5" name="Actualizar Lista" entity="ent3">
+    <ModifyUnit gr:x="300" gr:y="1515" id="sv1#mfu5" name="Actualizar Lista" entity="ent3">
       <Selector id="sv1#mfu5#su34" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#mfu5#su34#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv1#mfu5#oln18" name="OKFlow18" to="sv1#page7" automaticCoupling="true"/>
     </ModifyUnit>
-    <DeleteUnit gr:x="505" gr:y="1300" id="sv1#dlu2" name="Eliminar" entity="ent3">
+    <DeleteUnit gr:x="500" gr:y="1495" id="sv1#dlu2" name="Eliminar" entity="ent3">
       <Selector id="sv1#dlu2#su27" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#dlu2#su27#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv1#dlu2#oln20" name="OKFlow20" to="sv1#page7" automaticCoupling="true"/>
     </DeleteUnit>
     <LogoutUnit gr:x="1435" gr:y="25" id="sv1#lou2" name="Cerrar sesi&#243;n" landmark="true" siteView="sv2"/>
+    <ModuleInstanceUnit gr:x="1180" gr:y="1040" id="sv1#miu1" action="true" name="GuardarProgreso" moduleId="mov1#opm1">
+      <OKLink id="sv1#miu1#oln24" name="OKFlow24" to="sv1#page7" automaticCoupling="true"/>
+      <KOLink id="sv1#miu1#kln8" name="KOFlow8" to="sv1#page7" automaticCoupling="true" gr:bendpoints="-141,13,584,23"/>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

@@ -1,0 +1,50 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="90" gr:y="80" id="mov1#opm1" name="GuardarProgresoAD">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="30" gr:y="60" linkOrder="mov1#opm1#icu1#ln44 mov1#opm1#icu1#ln45">
+      <Link id="mov1#opm1#icu1#ln41" name="Flow41" to="mov1#opm1#inn2" type="transport" validate="true">
+        <LinkParameter id="mov1#opm1#icu1#ln41#par75" name="ProgresoKey_Input" source="mov1#opm1#icu1#icp1" target="mov1#opm1#inn2.isnotnull"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp1" name="ProgresoKey"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="EpisodiosVistos"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp3" name="FechaInicio"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp4" name="FechaFin"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp5" name="UserKey"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp6" name="SerieKey"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp7" name="NowTs"/>
+      <Link id="mov1#opm1#icu1#ln44" name="Flow44" to="mov1#opm1#cru4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm1#icu1#ln44#par77" name="EpisodiosVistos_episodiosVistos" source="mov1#opm1#icu1#icp2" target="mov1#opm1#cru4.ent4#att22"/>
+        <LinkParameter id="mov1#opm1#icu1#ln44#par81" name="FechaFin_fechaFin" source="mov1#opm1#icu1#icp4" target="mov1#opm1#cru4.ent4#att24"/>
+        <LinkParameter id="mov1#opm1#icu1#ln44#par93" name="FechaInicio_fechaInicio" source="mov1#opm1#icu1#icp3" target="mov1#opm1#cru4.ent4#att23"/>
+        <LinkParameter id="mov1#opm1#icu1#ln44#par94" name="SerieKey_Serie.oid(ProgresoSerieToSerie)" source="mov1#opm1#icu1#icp6" target="mov1#opm1#cru4.rel7#role14.ent1#att5"/>
+        <LinkParameter id="mov1#opm1#icu1#ln44#par95" name="NowTs_ultimaActualizacion" source="mov1#opm1#icu1#icp7" target="mov1#opm1#cru4.ent4#att25"/>
+        <LinkParameter id="mov1#opm1#icu1#ln44#par96" name="UserKey_User.oid(ProgresoSerieToUser)" source="mov1#opm1#icu1#icp5" target="mov1#opm1#cru4.rel6#role12.userOID"/>
+      </Link>
+      <Link id="mov1#opm1#icu1#ln45" name="Flow45" to="mov1#opm1#mfu7" type="transport" validate="true">
+        <LinkParameter id="mov1#opm1#icu1#ln45#par97" name="EpisodiosVistos_episodiosVistos" source="mov1#opm1#icu1#icp2" target="mov1#opm1#mfu7.ent4#att22"/>
+        <LinkParameter id="mov1#opm1#icu1#ln45#par98" name="FechaFin_fechaFin" source="mov1#opm1#icu1#icp4" target="mov1#opm1#mfu7.ent4#att24"/>
+        <LinkParameter id="mov1#opm1#icu1#ln45#par99" name="FechaInicio_fechaInicio" source="mov1#opm1#icu1#icp3" target="mov1#opm1#mfu7.ent4#att23"/>
+        <LinkParameter id="mov1#opm1#icu1#ln45#par100" name="NowTs_ultimaActualizacion" source="mov1#opm1#icu1#icp7" target="mov1#opm1#mfu7.ent4#att25"/>
+      </Link>
+      <OKLink id="mov1#opm1#icu1#oln26" name="OKFlow26" to="mov1#opm1#inn2" automaticCoupling="true" gr:bendpoints="170,5,-105,20"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit id="mov1#opm1#inn2" name="Is Not Null2" gr:x="370" gr:y="120">
+      <KOLink id="mov1#opm1#inn2#kln5" name="KOFlow5" to="mov1#opm1#cru4" automaticCoupling="true"/>
+      <OKLink id="mov1#opm1#inn2#oln21" name="OKFlow21" to="mov1#opm1#mfu7">
+        <LinkParameter id="mov1#opm1#inn2#oln21#par76" name="Input Value_KeyCondition28 [oid]" source="inputValue" target="mov1#opm1#mfu7#su36#kcond28.ent4#att21"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <CreateUnit id="mov1#opm1#cru4" name="CreateProgreso" gr:x="500" gr:y="195" entity="ent4">
+      <KOLink id="mov1#opm1#cru4#kln7" name="KOFlow7" to="mov1#opm1#kocu1" automaticCoupling="true"/>
+      <OKLink id="mov1#opm1#cru4#oln23" name="OKFlow23" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit id="mov1#opm1#mfu7" name="UpdateProgreso" gr:x="480" gr:y="-15" entity="ent4">
+      <Selector id="mov1#opm1#mfu7#su36" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm1#mfu7#su36#kcond28" name="KeyCondition28" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm1#mfu7#kln6" name="KOFlow6" to="mov1#opm1#kocu1" automaticCoupling="true"/>
+      <OKLink id="mov1#opm1#mfu7#oln22" name="OKFlow22" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="780" gr:y="60" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <KOCollectorUnit gr:x="780" gr:y="235" id="mov1#opm1#kocu1" name="KO Port1"/>
+  </OperationUnits>
+</OperationModule>
