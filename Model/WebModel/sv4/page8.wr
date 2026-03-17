@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page8" name="Mi Perfil" landmark="true" gr:x="705" gr:y="145">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page8" name="Mi Perfil" landmark="false" gr:x="720" gr:y="60">
   <ContentUnits>
     <SelectorUnit id="sv4#page8#seu3" name="SelUsuarioActual" gr:x="195" gr:y="0" entity="User">
       <Link id="sv4#page8#seu3#ln25" name="Flow7" to="sv4#page8#dau6" type="transport" validate="true">

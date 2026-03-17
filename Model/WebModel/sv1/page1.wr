@@ -13,6 +13,7 @@
       <Link id="sv1#page1#dau1#ln55" name="Flow55" to="sv1#cnu1" type="transport" validate="true">
         <LinkParameter id="sv1#page1#dau1#ln55#par87" name="oid_KeyCondition20 [oid] [Serie] [Source]" source="data.ent1#att5" target="sv1#cnu1#su25#kcond20.ent1#att5"/>
       </Link>
+      <Link id="sv1#page1#dau1#ln62" name="Flow62" to="sv1#page1#inu15" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
     <EntryUnit gr:x="190" gr:y="40" id="sv1#page1#enu3" name="Busqueda" linkOrder="sv1#page1#enu3#ln2">
       <Field id="sv1#page1#enu3#fld4" name="Nombre de la serie" type="string" modifiable="true"/>
@@ -29,6 +30,10 @@
     <GetUnit id="sv1#page1#gtu4" name="Get2" gr:x="145" gr:y="245" contextParameters="UserCtxParam">
       <Link id="sv1#page1#gtu4#ln52" name="Flow52" to="sv1#page1#seu9" type="transport" validate="true">
         <LinkParameter id="sv1#page1#gtu4#ln52#par83" name="UserCtxParam.oid_KeyCondition21 [oid]" source="sv1#page1#gtu4.UserCtxParam" target="sv1#page1#seu9#su31#kcond23.userOID"/>
+      </Link>
+      <Link id="sv1#page1#gtu4#ln67" name="Flow67" to="sv1#seu15" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#gtu4#ln67#par174" name="UserCtxParam.oid_usuario" source="sv1#page1#gtu4.UserCtxParam" target="sv1#seu15#su48#acond13"/>
+        <LinkParameter id="sv1#page1#gtu4#ln67#par186" name="UserCtxParam.oid_PASSING" source="sv1#page1#gtu4.UserCtxParam" passing="true"/>
       </Link>
     </GetUnit>
     <SelectorUnit id="sv1#page1#seu9" name="SelUsuarioActual" gr:x="330" gr:y="235" entity="User">
@@ -54,6 +59,25 @@
         <LinkParameter id="sv1#page1#enu8#ln58#par92" name="Elegir lista_KeyCondition22 [oid] [ListaUsuario] [Target]" source="sv1#page1#enu8#sfld2" target="sv1#cnu1#su26#kcond22.ent3#att18"/>
       </Link>
     </EntryUnit>
+    <DataUnit id="sv1#page1#dau10" name="Comentario" gr:x="560" gr:y="325" entity="ent6" displayAttributes="ent6#att29 ent6#att30 ent6#att42 rel10#role20.userName">
+      <Selector id="sv1#page1#dau10#su50" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page1#dau10#su50#kcond36" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <IndexUnit id="sv1#page1#inu15" name="Comentarios" linkOrder="sv1#page1#inu15#ln61 sv1#page1#inu15#ln66" gr:x="530" gr:y="150" entity="ent6" displayAttributes="ent6#att30 rel10#role20.userName">
+      <Selector id="sv1#page1#inu15#su51" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page1#inu15#su51#rcond10" name="RoleCondition6" predicate="in" implied="false" role="rel11#role21"/>
+      </Selector>
+      <Link id="sv1#page1#inu15#ln61" name="Mostrar cometario" to="sv1#page1#dau10" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#page1#inu15#ln64" name="Flow64" to="sv1#cru8" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#inu15#ln64#par185" name="oid_Comentario.oid(LikeComentarioToComentario)" source="data[].ent6#att28" target="sv1#cru8.rel13#role26.ent6#att28"/>
+      </Link>
+      <Link id="sv1#page1#inu15#ln65" name="Flow65" to="sv1#mfu9" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#page1#inu15#ln66" name="Like" to="sv1#seu15" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#inu15#ln66#par172" name="oid_like" source="data[].ent6#att28" target="sv1#seu15#su48#acond12"/>
+        <LinkParameter id="sv1#page1#inu15#ln66#par177" name="contadorLikes_PASSING" source="data[].ent6#att42" passing="true"/>
+      </Link>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid" layout:frameLayout="WRDefault/Default">
     <layout:Row>
@@ -165,7 +189,20 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#dau10">
+          <layout:Attribute attribute="ent6#att29"/>
+          <layout:Attribute attribute="ent6#att30"/>
+          <layout:Attribute attribute="ent6#att42"/>
+          <layout:Attribute attribute="rel10#role20.userName"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv1#page1#inu15">
+          <layout:Attribute attribute="ent6#att30"/>
+          <layout:Attribute attribute="rel10#role20.userName"/>
+          <layout:Link link="sv1#page1#inu15#ln61"/>
+          <layout:Link link="sv1#page1#inu15#ln66"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
