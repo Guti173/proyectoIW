@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="10" gr:y="790" id="sv1#page7" name="Mis Listas" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="115" gr:y="1285" id="sv1#page7" name="Mis Listas" landmark="true">
   <ContentUnits>
     <GetUnit gr:x="0" gr:y="10" id="sv1#page7#gtu1" name="Get1" contextParameters="UserCtxParam">
       <Link id="sv1#page7#gtu1#ln20" name="Flow20" to="sv1#page7#seu3" type="transport" validate="true">

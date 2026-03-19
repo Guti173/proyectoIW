@@ -1,12 +1,15 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="185" id="sv1#page1" name="Series" landmark="true" layout:linkLayout="WRDefault/Default">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="585" gr:y="315" id="sv1#page1" name="Series" landmark="true" layout:linkLayout="WRDefault/Default">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv1#page1#inu1" name="Lista Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu1#ln1">
-      <Link id="sv1#page1#inu1#ln1" name="Mostrar Serie" to="sv1#page1#dau1" type="normal" validate="true" gr:bendpoints="24,84,-91,-36" automaticCoupling="true"/>
+    <IndexUnit gr:x="5" gr:y="30" id="sv1#page1#inu1" name="Lista Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu1#ln1">
+      <Link id="sv1#page1#inu1#ln1" name="Mostrar Serie" to="sv1#page1#dau1" type="normal" validate="true" gr:bendpoints="24,84,-91,-36">
+        <LinkParameter id="sv1#page1#inu1#ln1#par182" name="oid_KeyCondition1 [oid]" source="data[].ent1#att5" target="sv1#page1#dau1#su1#kcond1.ent1#att5"/>
+        <LinkParameter id="sv1#page1#inu1#ln1#par183" name="true_mostrarFormCrearCom" sourceValue="true" targetVariable="sv1#page1#var5"/>
+      </Link>
       <Selector id="sv1#page1#inu1#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page1#inu1#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
     </IndexUnit>
-    <DataUnit gr:x="120" gr:y="115" id="sv1#page1#dau1" name="Serie" entity="ent1" displayAttributes="ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11 ent1#att13 ent1#att14 ent1#att12">
+    <DataUnit gr:x="125" gr:y="145" id="sv1#page1#dau1" name="Serie" entity="ent1" displayAttributes="ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11 ent1#att13 ent1#att14 ent1#att12">
       <Selector id="sv1#page1#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page1#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -14,20 +17,22 @@
         <LinkParameter id="sv1#page1#dau1#ln55#par87" name="oid_KeyCondition20 [oid] [Serie] [Source]" source="data.ent1#att5" target="sv1#cnu1#su25#kcond20.ent1#att5"/>
       </Link>
       <Link id="sv1#page1#dau1#ln62" name="Flow62" to="sv1#page1#inu15" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#page1#dau1#ln75" name="Flow75" to="sv1#cru5" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
-    <EntryUnit gr:x="190" gr:y="40" id="sv1#page1#enu3" name="Busqueda" linkOrder="sv1#page1#enu3#ln2">
+    <EntryUnit gr:x="135" gr:y="40" id="sv1#page1#enu3" name="Busqueda" linkOrder="sv1#page1#enu3#ln2">
       <Field id="sv1#page1#enu3#fld4" name="Nombre de la serie" type="string" modifiable="true"/>
       <Link id="sv1#page1#enu3#ln2" name="Buscar" to="sv1#seu1" type="normal" validate="true">
         <LinkParameter id="sv1#page1#enu3#ln2#par1" name="Nombre de la serie_que tenga" source="sv1#page1#enu3#fld4" target="sv1#seu1#su2#acond1"/>
       </Link>
     </EntryUnit>
-    <IndexUnit gr:x="5" gr:y="260" id="sv1#page1#inu3" name="Todas Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu3#ln4">
+    <IndexUnit gr:x="0" gr:y="300" id="sv1#page1#inu3" name="Todas Series" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13" linkOrder="sv1#page1#inu3#ln4">
       <Link id="sv1#page1#inu3#ln4" name="Mostrar" to="sv1#page1#dau1" type="normal" validate="true">
         <LinkParameter id="sv1#page1#inu3#ln4#par30" name="oid_KeyCondition1 [oid]" source="data[].ent1#att5" target="sv1#page1#dau1#su1#kcond1.ent1#att5"/>
         <LinkParameter id="sv1#page1#inu3#ln4#par31" name="true_mostrarGuardarSerie" sourceValue="true" targetVariable="sv1#page1#var3"/>
+        <LinkParameter id="sv1#page1#inu3#ln4#par180" name="true_mostrarFormCrearCom" sourceValue="true" targetVariable="sv1#page1#var5"/>
       </Link>
     </IndexUnit>
-    <GetUnit id="sv1#page1#gtu4" name="Get2" gr:x="145" gr:y="245" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#page1#gtu4" name="Get2" gr:x="150" gr:y="275" contextParameters="UserCtxParam">
       <Link id="sv1#page1#gtu4#ln52" name="Flow52" to="sv1#page1#seu9" type="transport" validate="true">
         <LinkParameter id="sv1#page1#gtu4#ln52#par83" name="UserCtxParam.oid_KeyCondition21 [oid]" source="sv1#page1#gtu4.UserCtxParam" target="sv1#page1#seu9#su31#kcond23.userOID"/>
       </Link>
@@ -35,8 +40,9 @@
         <LinkParameter id="sv1#page1#gtu4#ln67#par174" name="UserCtxParam.oid_usuario" source="sv1#page1#gtu4.UserCtxParam" target="sv1#seu15#su48#acond13"/>
         <LinkParameter id="sv1#page1#gtu4#ln67#par186" name="UserCtxParam.oid_PASSING" source="sv1#page1#gtu4.UserCtxParam" passing="true"/>
       </Link>
+      <Link id="sv1#page1#gtu4#ln74" name="Flow74" to="sv1#cru5" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <SelectorUnit id="sv1#page1#seu9" name="SelUsuarioActual" gr:x="330" gr:y="235" entity="User">
+    <SelectorUnit id="sv1#page1#seu9" name="SelUsuarioActual" gr:x="335" gr:y="265" entity="User">
       <Selector id="sv1#page1#seu9#su31" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page1#seu9#su31#kcond23" name="KeyCondition21" predicate="in" implied="false"/>
       </Selector>
@@ -44,7 +50,7 @@
         <LinkParameter id="sv1#page1#seu9#ln53#par84" name="oid_RoleCondition4 [oid]" source="userOIDArray" target="sv1#page1#seu10#su32#rcond5.userOID"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="sv1#page1#seu10" name="SelListasUsuario" gr:x="320" gr:y="410" entity="ent3">
+    <SelectorUnit id="sv1#page1#seu10" name="SelListasUsuario" gr:x="325" gr:y="440" entity="ent3">
       <Selector id="sv1#page1#seu10#su32" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page1#seu10#su32#rcond5" name="RoleCondition4" predicate="in" implied="false" role="rel4#role7"/>
       </Selector>
@@ -53,18 +59,18 @@
         <LinkParameter id="sv1#page1#seu10#ln54#par86" name="oid_Elegir lista [output]" source="ent3#att18Array" target="sv1#page1#enu8#sfld2_output"/>
       </Link>
     </SelectorUnit>
-    <EntryUnit id="sv1#page1#enu8" name="Guardar Serie" gr:x="145" gr:y="415" entity="ent1" linkOrder="sv1#page1#enu8#ln58">
+    <EntryUnit id="sv1#page1#enu8" name="Guardar Serie" gr:x="150" gr:y="445" entity="ent1" linkOrder="sv1#page1#enu8#ln58">
       <SelectionField id="sv1#page1#enu8#sfld2" name="Elegir lista" type="string"/>
       <Link id="sv1#page1#enu8#ln58" name="Guardar serie" to="sv1#cnu1" type="normal" validate="true">
         <LinkParameter id="sv1#page1#enu8#ln58#par92" name="Elegir lista_KeyCondition22 [oid] [ListaUsuario] [Target]" source="sv1#page1#enu8#sfld2" target="sv1#cnu1#su26#kcond22.ent3#att18"/>
       </Link>
     </EntryUnit>
-    <DataUnit id="sv1#page1#dau10" name="Comentario" gr:x="560" gr:y="325" entity="ent6" displayAttributes="ent6#att29 ent6#att30 ent6#att42 rel10#role20.userName">
+    <DataUnit id="sv1#page1#dau10" name="Comentario" gr:x="580" gr:y="440" entity="ent6" displayAttributes="ent6#att29 ent6#att30 ent6#att42 rel10#role20.userName">
       <Selector id="sv1#page1#dau10#su50" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page1#dau10#su50#kcond36" name="KeyCondition24" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <IndexUnit id="sv1#page1#inu15" name="Comentarios" linkOrder="sv1#page1#inu15#ln61 sv1#page1#inu15#ln66" gr:x="530" gr:y="150" entity="ent6" displayAttributes="ent6#att30 rel10#role20.userName">
+    <IndexUnit id="sv1#page1#inu15" name="Comentarios" linkOrder="sv1#page1#inu15#ln61 sv1#page1#inu15#ln66 sv1#page1#inu15#ln43" gr:x="635" gr:y="265" entity="ent6" displayAttributes="ent6#att30 rel10#role20.userName">
       <Selector id="sv1#page1#inu15#su51" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page1#inu15#su51#rcond10" name="RoleCondition6" predicate="in" implied="false" role="rel11#role21"/>
       </Selector>
@@ -77,7 +83,32 @@
         <LinkParameter id="sv1#page1#inu15#ln66#par172" name="oid_like" source="data[].ent6#att28" target="sv1#seu15#su48#acond12"/>
         <LinkParameter id="sv1#page1#inu15#ln66#par177" name="contadorLikes_PASSING" source="data[].ent6#att42" passing="true"/>
       </Link>
+      <Link id="sv1#page1#inu15#ln43" name="Modificar comentario" to="sv1#seu11" type="normal" validate="true" automaticCoupling="true"/>
     </IndexUnit>
+    <EntryUnit gr:x="565" gr:y="75" id="sv1#page1#enu12" name="Modificar com" linkOrder="sv1#page1#enu12#ln70" entity="ent6">
+      <Field id="sv1#page1#enu12#fld36" name="contenido" type="text" modifiable="true" preloaded="true" attribute="ent6#att29"/>
+      <Link id="sv1#page1#enu12#ln70" name="Modificar" to="sv1#mfu6" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu12#ln70#par122" name="contenido_contenido" source="sv1#page1#enu12#fld36" target="sv1#mfu6.ent6#att29"/>
+        <LinkParameter id="sv1#page1#enu12#ln70#par126" name="oid_PASSING_KeyCondition30 [oid]" sourceLinkParameter="sv1#inn4#oln30#par125" target="sv1#mfu6#su38#kcond30.ent6#att28"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit gr:x="380" gr:y="90" id="sv1#page1#enu13" name="Crear comentario" entity="ent6" fieldOrder="sv1#page1#enu13#fld43" linkOrder="sv1#page1#enu13#ln73">
+      <Field id="sv1#page1#enu13#fld43" name="contenido" type="text" modifiable="true" attribute="ent6#att29" preloaded="false"/>
+      <Link id="sv1#page1#enu13#ln73" name="Comentar" to="sv1#cru5" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu13#ln73#par135" name="Comentario Object_Comentario Object" source="entityBean" target="sv1#cru5.entityBeans"/>
+        <LinkParameter id="sv1#page1#enu13#ln73#par136" name="0_contadorLikes" sourceValue="0" target="sv1#cru5.ent6#att42"/>
+        <LinkParameter id="sv1#page1#enu13#ln73#par139" name="contenido_contenido" source="sv1#page1#enu13#fld43" target="sv1#cru5.ent6#att29"/>
+        <LinkParameter id="sv1#page1#enu13#ln73#par169" name="ACTIVO_estado" sourceValue="ACTIVO" target="sv1#cru5.ent6#att31"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit gr:x="555" gr:y="0" id="sv1#page1#tmu4" name="Time4">
+      <Link id="sv1#page1#tmu4#ln81" name="Flow81" to="sv1#cru5" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#tmu4#ln81#par199" name="Current/Input Date_fechaPublicacion" source="currentDate" target="sv1#cru5.ent6#att30"/>
+      </Link>
+      <Link id="sv1#page1#tmu4#ln82" name="Flow82" to="sv1#mfu6" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#tmu4#ln82#par200" name="Current/Input Date_fechaPublicacion" source="currentDate" target="sv1#mfu6.ent6#att30"/>
+      </Link>
+    </TimeUnit>
   </ContentUnits>
   <layout:Grid containerType="grid" layout:frameLayout="WRDefault/Default">
     <layout:Row>
@@ -190,17 +221,43 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page1#dau10">
-          <layout:Attribute attribute="ent6#att29"/>
-          <layout:Attribute attribute="ent6#att30"/>
-          <layout:Attribute attribute="ent6#att42"/>
-          <layout:Attribute attribute="rel10#role20.userName"/>
-        </layout:Unit>
-        <layout:Unit unitId="sv1#page1#inu15">
-          <layout:Attribute attribute="ent6#att30"/>
-          <layout:Attribute attribute="rel10#role20.userName"/>
-          <layout:Link link="sv1#page1#inu15#ln61"/>
-          <layout:Link link="sv1#page1#inu15#ln66"/>
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell>
+              <layout:Unit unitId="sv1#page1#dau10">
+                <layout:Attribute attribute="ent6#att29"/>
+                <layout:Attribute attribute="ent6#att30"/>
+                <layout:Attribute attribute="ent6#att42"/>
+                <layout:Attribute attribute="rel10#role20.userName"/>
+              </layout:Unit>
+              <layout:Unit unitId="sv1#page1#inu15">
+                <layout:Attribute attribute="ent6#att30"/>
+                <layout:Attribute attribute="rel10#role20.userName"/>
+                <layout:Link link="sv1#page1#inu15#ln61"/>
+                <layout:Link link="sv1#page1#inu15#ln66"/>
+                <layout:Link link="sv1#page1#inu15#ln43"/>
+              </layout:Unit>
+            </layout:Cell>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu12" layout:unitVisibilityConditionVariable="sv1#page1#var4">
+          <layout:Link link="sv1#page1#enu12#ln70"/>
+          <layout:Field field="sv1#page1#enu12#fld36"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -215,6 +272,41 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu13" layout:unitVisibilityConditionVariable="sv1#page1#var5">
+          <layout:Link link="sv1#page1#enu13#ln73"/>
+          <layout:Field field="sv1#page1#enu13#fld43"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
   <Variable id="sv1#page1#var3" name="mostrarGuardarSerie" type="boolean" value="false"/>
+  <Variable id="sv1#page1#var4" name="mostrarFormMod" type="boolean" value="false"/>
+  <Variable id="sv1#page1#var5" name="mostrarFormCrearCom" type="boolean" value="false"/>
 </Page>
