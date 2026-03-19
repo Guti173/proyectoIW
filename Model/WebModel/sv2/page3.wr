@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="965" gr:y="255" id="sv2#page3" name="Registro" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1205" gr:y="245" id="sv2#page3" name="Registro" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv2#page3#enu3" name="Registro" entity="User" linkOrder="sv2#page3#enu3#ln2">
       <Field id="sv2#page3#enu3#fld4" name="userName" type="string" modifiable="true"/>
@@ -9,8 +9,18 @@
         <LinkParameter id="sv2#page3#enu3#ln2#par5" name="password_password" source="sv2#page3#enu3#fld6" target="sv2#cru1.password"/>
         <LinkParameter id="sv2#page3#enu3#ln2#par6" name="User Object_User Object" source="entityBean" target="sv2#cru1.entityBeans"/>
         <LinkParameter id="sv2#page3#enu3#ln2#par7" name="userName_userName" source="sv2#page3#enu3#fld4" target="sv2#cru1.userName"/>
+        <LinkParameter id="sv2#page3#enu3#ln2#par78" name="apellidos_apellidos" source="sv2#page3#enu3#fld34" target="sv2#cru1.User#att2"/>
+        <LinkParameter id="sv2#page3#enu3#ln2#par115" name="nombre_nombre" source="sv2#page3#enu3#fld33" target="sv2#cru1.User#att1"/>
+        <LinkParameter id="sv2#page3#enu3#ln2#par116" name="apellidos_ReporteComentario.oid(UserToReporteComentario)" source="sv2#page3#enu3#fld34" target="sv2#cru1.rel14#role27.ent9#att37"/>
+      </Link>
+      <Field id="sv2#page3#enu3#fld33" name="nombre" type="string" modifiable="true" attribute="User#att1"/>
+      <Field id="sv2#page3#enu3#fld34" name="apellidos" type="string" modifiable="true" attribute="User#att2"/>
+      <Link id="sv2#page3#enu3#ln60" name="Flow60" to="sv2#lgu1" type="transport" validate="true">
+        <LinkParameter id="sv2#page3#enu3#ln60#par120" name="userName_Username" source="sv2#page3#enu3#fld4" target="sv2#lgu1.username"/>
+        <LinkParameter id="sv2#page3#enu3#ln60#par121" name="password_Password" source="sv2#page3#enu3#fld6" target="sv2#lgu1.password"/>
       </Link>
     </EntryUnit>
+    <MultiMessageUnit gr:x="5" gr:y="95" id="sv2#page3#mssu3" name="Error"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -19,8 +29,26 @@
           <layout:Field field="sv2#page3#enu3#fld4"/>
           <layout:Field field="sv2#page3#enu3#fld5"/>
           <layout:Field field="sv2#page3#enu3#fld6"/>
+          <layout:Field field="sv2#page3#enu3#fld33"/>
+          <layout:Field field="sv2#page3#enu3#fld34"/>
           <layout:Link link="sv2#page3#enu3#ln2"/>
         </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page3#mssu3"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
