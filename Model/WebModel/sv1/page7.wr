@@ -250,6 +250,20 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
   <Variable id="sv1#page7#var1" name="mostrarFormLista" type="boolean" value="false"/>
   <Variable id="sv1#page7#var2" name="mostrarProgresoSerie" type="boolean" value="false"/>

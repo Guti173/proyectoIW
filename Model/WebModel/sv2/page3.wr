@@ -12,13 +12,10 @@
         <LinkParameter id="sv2#page3#enu3#ln2#par78" name="apellidos_apellidos" source="sv2#page3#enu3#fld34" target="sv2#cru1.User#att2"/>
         <LinkParameter id="sv2#page3#enu3#ln2#par115" name="nombre_nombre" source="sv2#page3#enu3#fld33" target="sv2#cru1.User#att1"/>
         <LinkParameter id="sv2#page3#enu3#ln2#par116" name="apellidos_ReporteComentario.oid(UserToReporteComentario)" source="sv2#page3#enu3#fld34" target="sv2#cru1.rel14#role27.ent9#att37"/>
+        <LinkParameter id="sv2#page3#enu3#ln2#par262" name="1001_Group.oid(defaultGroup)" sourceValue="1001" target="sv2#cru1.User2DefaultGroup.groupOID"/>
       </Link>
       <Field id="sv2#page3#enu3#fld33" name="nombre" type="string" modifiable="true" attribute="User#att1"/>
       <Field id="sv2#page3#enu3#fld34" name="apellidos" type="string" modifiable="true" attribute="User#att2"/>
-      <Link id="sv2#page3#enu3#ln60" name="Flow60" to="sv2#lgu1" type="transport" validate="true">
-        <LinkParameter id="sv2#page3#enu3#ln60#par120" name="userName_Username" source="sv2#page3#enu3#fld4" target="sv2#lgu1.username"/>
-        <LinkParameter id="sv2#page3#enu3#ln60#par121" name="password_Password" source="sv2#page3#enu3#fld6" target="sv2#lgu1.password"/>
-      </Link>
     </EntryUnit>
     <MultiMessageUnit gr:x="5" gr:y="95" id="sv2#page3#mssu3" name="Error"/>
   </ContentUnits>

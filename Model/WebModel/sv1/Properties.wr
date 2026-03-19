@@ -39,9 +39,8 @@
       <OKLink id="sv1#dlu2#oln20" name="OKFlow20" to="sv1#page7" automaticCoupling="true"/>
     </DeleteUnit>
     <LogoutUnit gr:x="1435" gr:y="25" id="sv1#lou2" name="Cerrar sesi&#243;n" landmark="true" siteView="sv2"/>
-    <ModuleInstanceUnit gr:x="1180" gr:y="1040" id="sv1#miu1" action="true" name="GuardarProgreso" moduleId="mov1#opm1">
+    <ModuleInstanceUnit gr:x="1305" gr:y="1040" id="sv1#miu1" action="true" name="GuardarProgreso" moduleId="mov1#opm1">
       <OKLink id="sv1#miu1#oln24" name="OKFlow24" to="sv1#page7" automaticCoupling="true"/>
-      <KOLink id="sv1#miu1#kln8" name="KOFlow8" to="sv1#page7" automaticCoupling="true" gr:bendpoints="-141,13,584,23"/>
     </ModuleInstanceUnit>
     <ModifyUnit id="sv1#mfu9" name="Actualizar Likes" gr:x="915" gr:y="595" entity="ent6">
       <Selector id="sv1#mfu9#su47" defaultPolicy="fill" booleanOperator="and">

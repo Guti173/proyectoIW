@@ -6,12 +6,13 @@
       </KOLink>
     </LoginUnit>
     <CreateUnit gr:x="985" gr:y="60" id="sv2#cru1" name="Create1" entity="User">
-      <OKLink id="sv2#cru1#oln29" name="OKFlow29" to="sv2#cnu2">
-        <LinkParameter id="sv2#cru1#oln29#par118" name="oid_KeyCondition21 [oid] [User] [Source]" source="userOIDArray" target="sv2#cnu2#su33#kcond21.userOID"/>
-      </OKLink>
       <KOLink id="sv2#cru1#kln4" name="KOFlow4" to="sv2#page3#mssu3">
         <LinkParameter id="sv2#cru1#kln4#par122" name="ERROR AL CREAR USUARIO!!_Shown Messages" sourceValue="ERROR AL CREAR USUARIO!!" target="sv2#page3#mssu3.shownMessages"/>
       </KOLink>
+      <OKLink id="sv2#cru1#oln60" name="OKFlow60" to="sv2#lgu1">
+        <LinkParameter id="sv2#cru1#oln60#par260" name="userName_Username" source="userNameArray" target="sv2#lgu1.username"/>
+        <LinkParameter id="sv2#cru1#oln60#par261" name="password_Password" source="passwordArray" target="sv2#lgu1.password"/>
+      </OKLink>
     </CreateUnit>
     <SelectorUnit id="sv2#seu2" name="Selector1" gr:x="250" gr:y="175" entity="ent1">
       <Selector id="sv2#seu2#su4" defaultPolicy="fill" booleanOperator="and">
@@ -19,25 +20,5 @@
       </Selector>
       <OKLink id="sv2#seu2#oln2" name="OKFlow1" to="sv2#page5#inu2" automaticCoupling="true"/>
     </SelectorUnit>
-    <SelectorUnit gr:x="940" gr:y="380" id="sv2#seu11" name="SelGrupoUser" entity="Group" linkOrder="sv2#seu11#ln59">
-      <Selector id="sv2#seu11#su30" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv2#seu11#su30#acond6" name="AttCondition6" predicate="eq" booleanOperator="or" implied="false" attributes="groupName" value="USER"/>
-      </Selector>
-      <Link id="sv2#seu11#ln43" name="Flow43" to="sv2#cru1" type="transport" validate="true">
-        <LinkParameter id="sv2#seu11#ln43#par117" name="oid_Group.oid(defaultGroup)" source="groupOIDArray" target="sv2#cru1.User2DefaultGroup.groupOID"/>
-      </Link>
-      <Link id="sv2#seu11#ln59" name="Flow59" to="sv2#cnu2" type="transport" validate="true">
-        <LinkParameter id="sv2#seu11#ln59#par119" name="oid_KeyCondition29 [oid] [Group] [Target]" source="groupOIDArray" target="sv2#cnu2#su38#kcond29.groupOID"/>
-      </Link>
-    </SelectorUnit>
-    <ConnectUnit gr:x="665" gr:y="305" id="sv2#cnu2" name="ConnectUserGroup" relationship="User2Group">
-      <SourceSelector id="sv2#cnu2#su33" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#cnu2#su33#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
-      </SourceSelector>
-      <TargetSelector id="sv2#cnu2#su38" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#cnu2#su38#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
-      </TargetSelector>
-      <OKLink id="sv2#cnu2#oln30" name="OKFlow30" to="sv2#lgu1" automaticCoupling="true"/>
-    </ConnectUnit>
   </OperationUnits>
 </SiteView>
