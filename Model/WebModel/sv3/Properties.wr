@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" protected="true" landmarks="sv3#page6 sv3#page7" homePage="sv3#seu12">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" protected="true" landmarks="sv3#page6 sv3#page7 sv3#page3" homePage="sv3#seu12">
   <OperationUnits>
     <DeleteUnit id="sv3#dlu3" name="DeleteSerie" gr:x="420" gr:y="110" entity="ent1">
       <Selector id="sv3#dlu3#su9" defaultPolicy="fill" booleanOperator="and">

@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page14" name="SolicitudesAmistad" landmark="true" gr:x="1290" gr:y="2565">
+  <ContentUnits>
+    <IndexUnit id="sv1#page14#inu19" name="ListaAmistades" linkOrder="sv1#page14#inu19#ln88 sv1#page14#inu19#ln89" gr:x="0" gr:y="0" entity="ent8" displayAttributes="ent8#att33 ent8#att34 ent8#att35 ent8#att36 rel17#role34.userOID">
+      <Selector id="sv1#page14#inu19#su46" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page14#inu19#su46#acond16" name="EstadoPendiente" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att34" value="PENDIENTE"/>
+        <RelationshipRoleCondition id="sv1#page14#inu19#su46#rcond9" name="soyreceptor" predicate="in" implied="false" role="rel17#role33"/>
+      </Selector>
+      <Link id="sv1#page14#inu19#ln88" name="AceptarAmistad" to="sv1#mfu14" type="normal" validate="true">
+        <LinkParameter id="sv1#page14#inu19#ln88#par211" name="oid_KeyCondition27 [oid]" source="data[].ent8#att33" target="sv1#mfu14#su52#kcond38.ent8#att33"/>
+        <LinkParameter id="sv1#page14#inu19#ln88#par212" name="ACEPTADA_estado" target="sv1#mfu14.ent8#att34" sourceValue="ACEPTADA"/>
+      </Link>
+      <Link id="sv1#page14#inu19#ln89" name="RechazarAmistad" to="sv1#mfu13" type="normal" validate="true">
+        <LinkParameter id="sv1#page14#inu19#ln89#par213" name="DENEGADA_estado" target="sv1#mfu13.ent8#att34" sourceValue="RECHAZADA"/>
+        <LinkParameter id="sv1#page14#inu19#ln89#par214" name="oid_KeyCondition28 [oid]" source="data[].ent8#att33" target="sv1#mfu13#su45#kcond37.ent8#att33"/>
+      </Link>
+    </IndexUnit>
+    <GetUnit id="sv1#page14#gtu9" name="Get8" gr:x="240" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="sv1#page14#gtu9#ln114" name="Flow114" to="sv1#page14#inu19" type="transport" validate="true">
+        <LinkParameter id="sv1#page14#gtu9#ln114#par220" name="UserCtxParam.oid_soyreceptor [oid]" source="sv1#page14#gtu9.UserCtxParam" target="sv1#page14#inu19#su46#rcond9.userOID"/>
+      </Link>
+    </GetUnit>
+    <TimeUnit id="sv1#page14#tmu7" name="FechaActual" gr:x="95" gr:y="145">
+      <Link id="sv1#page14#tmu7#ln117" name="Flow117" to="sv1#mfu14" type="transport" validate="true">
+        <LinkParameter id="sv1#page14#tmu7#ln117#par223" name="Current/Input Timestamp_fechaRespuesta" source="currentTimestamp" target="sv1#mfu14.ent8#att36"/>
+      </Link>
+      <Link id="sv1#page14#tmu7#ln118" name="Flow118" to="sv1#mfu13" type="transport" validate="true">
+        <LinkParameter id="sv1#page14#tmu7#ln118#par222" name="Current/Input Timestamp_fechaRespuesta" source="currentTimestamp" target="sv1#mfu13.ent8#att36"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page14#inu19">
+          <layout:Link link="sv1#page14#inu19#ln88"/>
+          <layout:Link link="sv1#page14#inu19#ln89"/>
+          <layout:Attribute attribute="ent8#att33"/>
+          <layout:Attribute attribute="ent8#att34"/>
+          <layout:Attribute attribute="ent8#att35"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="rel17#role34.userOID"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

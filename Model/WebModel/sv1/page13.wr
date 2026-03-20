@@ -1,0 +1,96 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="A&#241;adirAmigo" landmark="true" protected="false" gr:x="480" gr:y="2480">
+  <ContentUnits>
+    <IndexUnit id="sv1#page13#inu18" name="Usuarios" linkOrder="sv1#page13#inu18#ln83" gr:x="20" gr:y="0" entity="User" displayAttributes="userName User#att1 User#att2">
+      <Selector id="sv1#page13#inu18#su44" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page13#inu18#su44#acond18" name="AttCondition18" predicate="neq" booleanOperator="or" implied="false" attributes="userOID"/>
+      </Selector>
+      <Link id="sv1#page13#inu18#ln83" name="Crear Amistad" to="sv1#cru11" type="normal" validate="true">
+        <LinkParameter id="sv1#page13#inu18#ln83#par205" name="oid_User.oid(AmistadToUser_2)" source="data[].userOID" target="sv1#cru11.rel17#role34.userOID"/>
+        <LinkParameter id="sv1#page13#inu18#ln83#par206" name="PENDIENTE_estado" target="sv1#cru11.ent8#att34" sourceValue="PENDIENTE"/>
+      </Link>
+    </IndexUnit>
+    <GetUnit gr:x="175" gr:y="30" id="sv1#page13#gtu8" name="Get8" contextParameters="UserCtxParam">
+      <Link id="sv1#page13#gtu8#ln93" name="Flow93" to="sv1#page13#inu18" type="transport" validate="true">
+        <LinkParameter id="sv1#page13#gtu8#ln93#par218" name="UserCtxParam.oid_AttCondition18" source="sv1#page13#gtu8.UserCtxParam" target="sv1#page13#inu18#su44#acond18"/>
+      </Link>
+      <Link id="sv1#page13#gtu8#ln113" name="Flow113" to="sv1#cru11" type="transport" validate="true">
+        <LinkParameter id="sv1#page13#gtu8#ln113#par219" name="UserCtxParam.oid_User.oid(AmistadToUser)" source="sv1#page13#gtu8.UserCtxParam" target="sv1#cru11.rel16#role32.userOID"/>
+      </Link>
+      <Link id="sv1#page13#gtu8#ln115" name="Flow115" to="sv1#page13#inu24" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <IndexUnit gr:x="0" gr:y="165" id="sv1#page13#inu24" name="HistorialAmistades" entity="ent8" displayAttributes="ent8#att33 ent8#att34 ent8#att35 ent8#att36 rel16#role32.userOID rel16#role32.userName rel17#role34.userOID rel17#role34.userName">
+      <Selector id="sv1#page13#inu24#su55" defaultPolicy="fill" booleanOperator="or">
+        <RelationshipRoleCondition id="sv1#page13#inu24#su55#rcond12" name="SolicitanteAmistad" predicate="in" implied="true" role="rel16#role31"/>
+        <RelationshipRoleCondition id="sv1#page13#inu24#su55#rcond17" predicate="in" implied="true" name="ReceptroSolicitud" role="rel17#role33"/>
+      </Selector>
+    </IndexUnit>
+    <TimeUnit gr:x="200" gr:y="195" id="sv1#page13#tmu6" name="FechaActual">
+      <Link id="sv1#page13#tmu6#ln116" name="Flow116" to="sv1#cru11" type="transport" validate="true">
+        <LinkParameter id="sv1#page13#tmu6#ln116#par221" name="Current/Input Timestamp_fechaSolicitud" source="currentTimestamp" target="sv1#cru11.ent8#att35"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page13#inu18">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="User#att1"/>
+          <layout:Attribute attribute="User#att2"/>
+          <layout:Link link="sv1#page13#inu18#ln83"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page13#inu24">
+          <layout:Attribute attribute="ent8#att33"/>
+          <layout:Attribute attribute="ent8#att34"/>
+          <layout:Attribute attribute="ent8#att35"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="rel16#role32.userOID"/>
+          <layout:Attribute attribute="rel16#role32.userName"/>
+          <layout:Attribute attribute="rel17#role34.userOID"/>
+          <layout:Attribute attribute="rel17#role34.userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv1#page13#var9" name="UserID" type="integer"/>
+</Page>

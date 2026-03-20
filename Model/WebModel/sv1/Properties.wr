@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Site View 1" linkVisibilityPolicy="always" protected="true" landmarks="sv1#page7 sv1#page1 sv1#page4 sv1#lou2" layout:pageLayout="WebRatio/Basic" homePage="sv1#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Site View 1" linkVisibilityPolicy="always" protected="true" landmarks="sv1#page7 sv1#page1 sv1#page4 sv1#lou2 sv1#page14 sv1#page13" layout:pageLayout="WebRatio/Basic" homePage="sv1#page1">
   <OperationUnits>
     <SelectorUnit gr:x="670" gr:y="170" id="sv1#seu1" name="Selector1" entity="ent1">
       <Selector id="sv1#seu1#su2" defaultPolicy="fill" booleanOperator="and">
@@ -136,5 +136,20 @@
         <LinkParameter id="sv1#gtu2#ln80#par198" name="UserCtxParam.oid_AttCondition9" source="sv1#gtu2.UserCtxParam" target="sv1#seu11#su30#acond9"/>
       </Link>
     </GetUnit>
+    <ModifyUnit id="sv1#mfu13" name="RechazarAmistad" gr:x="985" gr:y="2775" entity="ent8">
+      <Selector id="sv1#mfu13#su45" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu13#su45#kcond37" name="KeyCondition28" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#mfu13#oln43" name="OKFlow23" to="sv1#page14" automaticCoupling="true" gr:bendpoints="169,-39,-76,171"/>
+    </ModifyUnit>
+    <CreateUnit id="sv1#cru11" name="CrearAmistad" gr:x="860" gr:y="2305" entity="ent8">
+      <OKLink id="sv1#cru11#oln44" name="OKFlow22" to="sv1#page13" automaticCoupling="true" gr:bendpoints="30,89,135,-121"/>
+    </CreateUnit>
+    <ModifyUnit id="sv1#mfu14" name="AceptarAmistad" gr:x="1060" gr:y="2630" entity="ent8">
+      <Selector id="sv1#mfu14#su52" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu14#su52#kcond38" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#mfu14#oln45" name="OKFlow21" to="sv1#page14" automaticCoupling="true" gr:bendpoints="112,-48,-153,-18"/>
+    </ModifyUnit>
   </OperationUnits>
 </SiteView>
