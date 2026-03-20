@@ -110,7 +110,7 @@
       </Link>
     </TimeUnit>
   </ContentUnits>
-  <layout:Grid containerType="grid" layout:frameLayout="WRDefault/Default">
+  <layout:Grid containerType="grid" layout:frameLayout="WebRatio/Basic">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page1#inu1">

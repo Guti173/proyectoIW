@@ -1,0 +1,344 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page10" name="Mis Listas" landmark="true" gr:x="80" gr:y="1180">
+  <ContentUnits>
+    <GetUnit id="sv1#page10#gtu5" name="Get1" gr:x="0" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="sv1#page10#gtu5#ln49" name="Flow20" to="sv1#page10#seu13" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#gtu5#ln49#par9" name="UserCtxParam.oid_usuarioActual [oid]" source="sv1#page10#gtu5.UserCtxParam" target="sv1#page10#seu13#su35#kcond37.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv1#page10#seu13" name="SelUsuarioActual" gr:x="195" gr:y="0" entity="User">
+      <Selector id="sv1#page10#seu13#su35" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page10#seu13#su35#kcond37" name="usuarioActual" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page10#seu13#ln50" name="Flow23" to="sv1#page10#inu12" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu13#ln50#par54" name="oid_ListasDelUsuario [oid]" source="userOIDArray" target="sv1#page10#inu12#su39#rcond4.userOID"/>
+      </Link>
+      <Link id="sv1#page10#seu13#ln51" name="Flow50" to="sv1#cru9" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu13#ln51#par60" name="oid_User.oid(ListaUsuarioToUser)" source="userOIDArray" target="sv1#cru9.rel4#role8.userOID"/>
+      </Link>
+      <Link id="sv1#page10#seu13#ln56" name="Flow38" to="sv1#page10#seu14" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu13#ln56#par61" name="oid_ProgresoDelUsuario [oid]" source="userOIDArray" target="sv1#page10#seu14#su45#rcond9.userOID"/>
+      </Link>
+      <Link id="sv1#page10#seu13#ln57" name="Flow48" to="sv1#miu4" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu13#ln57#par62" name="oid_UserKey" source="userOIDArray" target="sv1#miu4.mov1#opm1#icu1#icp5"/>
+      </Link>
+      <Link id="sv1#page10#seu13#ln59" name="Flow116" to="sv1#page10#seu16" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu13#ln59#par74" name="oid_valUsuario [oid]" source="userOIDArray" target="sv1#page10#seu16#su46#rcond12.userOID"/>
+      </Link>
+      <Link id="sv1#page10#seu13#ln60" name="Flow120" to="sv1#miu5" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu13#ln60#par79" name="oid_userKey" source="userOIDArray" target="sv1#miu5.mov1#opm2#icu2#icp10"/>
+      </Link>
+    </SelectorUnit>
+    <IndexUnit id="sv1#page10#inu12" name="Mis Listas" linkOrder="sv1#page10#inu12#ln63" gr:x="185" gr:y="155" entity="ent3" displayAttributes="ent3#att19 ent3#att20">
+      <Selector id="sv1#page10#inu12#su39" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page10#inu12#su39#rcond4" name="ListasDelUsuario" predicate="in" implied="false" role="rel4#role7"/>
+      </Selector>
+      <Link id="sv1#page10#inu12#ln63" name="Detalles" to="sv1#page10#dau7" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#inu12#ln63#par80" name="oid_KeyCondition13 [oid]" source="data[].ent3#att18" target="sv1#page10#dau7#su40#kcond38.ent3#att18"/>
+        <LinkParameter id="sv1#page10#inu12#ln63#par82" name="true_mostrarFormLista" targetVariable="sv1#page10#var8" sourceValue="true"/>
+      </Link>
+    </IndexUnit>
+    <DataUnit id="sv1#page10#dau7" name="Detalles de la Lista" customDescriptor="false" gr:x="445" gr:y="140" entity="ent3" displayAttributes="ent3#att19 ent3#att20">
+      <Selector id="sv1#page10#dau7#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page10#dau7#su40#kcond38" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page10#dau7#ln68" name="Flow25" to="sv1#page10#inu14" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#dau7#ln68#par101" name="oid_SeriesDeEstaLista [oid]" source="data.ent3#att18" target="sv1#page10#inu14#su43#rcond8.ent3#att18"/>
+      </Link>
+      <Link id="sv1#page10#dau7#ln69" name="Editar Lista" to="sv1#page10#enu11" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#dau7#ln69#par106" name="oid_Key Condition [oid]" source="data.ent3#att18" target="sv1#page10#enu11.ent3#att18"/>
+      </Link>
+    </DataUnit>
+    <IndexUnit id="sv1#page10#inu14" name="Series de la Lista" linkOrder="sv1#page10#inu14#ln71 sv1#page10#inu14#ln131" gr:x="405" gr:y="300" entity="ent1" displayAttributes="ent1#att6 ent1#att8 ent1#att10 ent1#att13">
+      <Selector id="sv1#page10#inu14#su43" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page10#inu14#su43#rcond8" name="SeriesDeEstaLista" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+      <Link id="sv1#page10#inu14#ln71" name="Detalles" to="sv1#page10#dau9" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#inu14#ln71#par107" name="oid_KeyCondition27 [oid]" source="data[].ent1#att5" target="sv1#page10#dau9#su44#kcond39.ent1#att5"/>
+        <LinkParameter id="sv1#page10#inu14#ln71#par108" name="true_mostrarProgresoSerie" targetVariable="sv1#page10#var9" sourceValue="true"/>
+      </Link>
+      <Link id="sv1#page10#inu14#ln127" name="Flow127" to="sv1#page10#seu16" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#inu14#ln127#par217" name="oid_valSerie [oid]" source="data[].ent1#att5" target="sv1#page10#seu16#su46#rcond19.ent1#att5"/>
+      </Link>
+      <Link id="sv1#page10#inu14#ln131" name="Valorar" to="sv1#page10#enu20" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#inu14#ln131#par218" name="oid_PASSING" source="data[].ent1#att5" passing="true"/>
+        <LinkParameter id="sv1#page10#inu14#ln131#par110" name="true_mostrarValorar" sourceValue="true" targetVariable="sv1#page10#var1"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit id="sv1#page10#enu11" name="A&#241;adir/Editar" linkOrder="sv1#page10#enu11#ln78 sv1#page10#enu11#ln79" gr:x="195" gr:y="310" entity="ent3">
+      <Field id="sv1#page10#enu11#fld35" name="Nombre" type="string" modifiable="true" attribute="ent3#att19"/>
+      <Link id="sv1#page10#enu11#ln78" name="Actualizar" to="sv1#mfu10" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#enu11#ln78#par113" name="Key [oid]_KeyCondition25 [oid]" source="key.ent3#att18" target="sv1#mfu10#su33#kcond29.ent3#att18"/>
+        <LinkParameter id="sv1#page10#enu11#ln78#par114" name="Nombre_tipoLista" source="sv1#page10#enu11#fld35" target="sv1#mfu10.ent3#att19"/>
+      </Link>
+      <Link id="sv1#page10#enu11#ln79" name="Eliminar" to="sv1#dlu6" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#enu11#ln79#par117" name="Key [oid]_KeyCondition26 [oid]" source="key.ent3#att18" target="sv1#dlu6#su34#kcond31.ent3#att18"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit id="sv1#page10#dau9" name="Detalles de la serie" gr:x="665" gr:y="300" entity="ent1" displayAttributes="ent1#att6 ent1#att11 ent1#att12 ent1#att13 ent1#att14">
+      <Selector id="sv1#page10#dau9#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page10#dau9#su44#kcond39" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page10#dau9#ln83" name="Flow39" to="sv1#page10#seu14" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#dau9#ln83#par123" name="oid_ProgresoDeLaSerie [oid]" source="data.ent1#att5" target="sv1#page10#seu14#su45#rcond11.ent1#att5"/>
+      </Link>
+      <Link id="sv1#page10#dau9#ln84" name="Flow56" to="sv1#miu4" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#dau9#ln84#par132" name="oid_SerieKey" source="data.ent1#att5" target="sv1#miu4.mov1#opm1#icu1#icp6"/>
+      </Link>
+    </DataUnit>
+    <SelectorUnit id="sv1#page10#seu14" name="selProgresoActual" gr:x="840" gr:y="55" entity="ent4">
+      <Selector id="sv1#page10#seu14#su45" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page10#seu14#su45#rcond9" name="ProgresoDelUsuario" predicate="in" implied="false" role="rel6#role11"/>
+        <RelationshipRoleCondition id="sv1#page10#seu14#su45#rcond11" name="ProgresoDeLaSerie" predicate="in" implied="false" role="rel7#role13"/>
+      </Selector>
+      <Link id="sv1#page10#seu14#ln85" name="Flow40" to="sv1#page10#enu14" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu14#ln85#par133" name="oid_Key Condition [oid]" source="ent4#att21Array" target="sv1#page10#enu14.ent4#att21"/>
+      </Link>
+      <Link id="sv1#page10#seu14#ln86" name="Flow46" to="sv1#miu4" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu14#ln86#par141" name="oid_ProgresoKey" source="ent4#att21Array" target="sv1#miu4.mov1#opm1#icu1#icp1"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv1#page10#enu14" name="Tu Progreso" linkOrder="sv1#page10#enu14#ln87" gr:x="870" gr:y="350" entity="ent4">
+      <Field id="sv1#page10#enu14#fld44" name="episodiosVistos" type="integer" modifiable="true" attribute="ent4#att22"/>
+      <Field id="sv1#page10#enu14#fld45" name="fechaInicio" type="date" modifiable="true" attribute="ent4#att23"/>
+      <Field id="sv1#page10#enu14#fld46" name="fechaFin" type="date" modifiable="true" attribute="ent4#att24"/>
+      <Link id="sv1#page10#enu14#ln87" name="Actualizar" to="sv1#miu4" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#enu14#ln87#par184" name="episodiosVistos_EpisodiosVistos" source="sv1#page10#enu14#fld44" target="sv1#miu4.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv1#page10#enu14#ln87#par195" name="fechaFin_FechaFin" source="sv1#page10#enu14#fld46" target="sv1#miu4.mov1#opm1#icu1#icp4"/>
+        <LinkParameter id="sv1#page10#enu14#ln87#par201" name="fechaInicio_FechaInicio" source="sv1#page10#enu14#fld45" target="sv1#miu4.mov1#opm1#icu1#icp3"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit id="sv1#page10#tmu3" name="Ahora" gr:x="1015" gr:y="445">
+      <Link id="sv1#page10#tmu3#ln88" name="Flow57" to="sv1#miu4" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#tmu3#ln88#par202" name="Current/Input Timestamp_NowTs" source="currentTimestamp" target="sv1#miu4.mov1#opm1#icu1#icp7"/>
+      </Link>
+    </TimeUnit>
+    <EntryUnit id="sv1#page10#enu19" name="Crear Lista" linkOrder="sv1#page10#enu19#ln89" gr:x="10" gr:y="285" entity="ent3">
+      <Field id="sv1#page10#enu19#fld47" name="nombre" type="string" modifiable="true" attribute="ent3#att19"/>
+      <Link id="sv1#page10#enu19#ln89" name="Crear" to="sv1#cru9" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#enu19#ln89#par203" name="nombre_tipoLista" source="sv1#page10#enu19#fld47" target="sv1#cru9.ent3#att19"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="sv1#page10#mssu4" name="ErrorProgreso" gr:x="1050" gr:y="65"/>
+    <EntryUnit id="sv1#page10#enu20" name="Valorar" linkOrder="sv1#page10#enu20#ln90" gr:x="760" gr:y="470" entity="ent5">
+      <Field id="sv1#page10#enu20#fld48" name="puntuacion" type="integer" modifiable="true" attribute="ent5#att27"/>
+      <Link id="sv1#page10#enu20#ln90" name="Valorar" to="sv1#miu5" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#enu20#ln90#par204" name="puntuacion_Valoracion" source="sv1#page10#enu20#fld48" target="sv1#miu5.mov1#opm2#icu2#icp9"/>
+        <LinkParameter id="sv1#page10#enu20#ln90#par219" name="oid_PASSING_serieKey" sourceLinkParameter="sv1#page10#inu14#ln131#par218" target="sv1#miu5.mov1#opm2#icu2#icp11"/>
+      </Link>
+      <Field id="sv1#page10#enu20#fld49" name="serieKey" type="integer" modifiable="true" hidden="true"/>
+    </EntryUnit>
+    <SelectorUnit id="sv1#page10#seu16" name="SelValoracionActual" gr:x="420" gr:y="525" entity="ent5">
+      <Selector id="sv1#page10#seu16#su46" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page10#seu16#su46#rcond12" name="valUsuario" predicate="in" implied="false" role="rel8#role15"/>
+        <RelationshipRoleCondition id="sv1#page10#seu16#su46#rcond19" name="valSerie" predicate="in" implied="false" role="rel9#role17"/>
+      </Selector>
+      <Link id="sv1#page10#seu16#ln91" name="Flow113" to="sv1#page10#enu20" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu16#ln91#par205" name="oid_Key Condition [oid]" source="ent5#att26Array" target="sv1#page10#enu20.ent5#att26"/>
+      </Link>
+      <Link id="sv1#page10#seu16#ln92" name="Flow117" to="sv1#miu5" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#seu16#ln92#par206" name="oid_keyValoracion" source="ent5#att26Array" target="sv1#miu5.mov1#opm2#icu2#icp8"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit gr:x="1015" gr:y="615" id="sv1#page10#mssu5" name="ErrorValoracion"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#inu12">
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Link link="sv1#page10#inu12#ln63"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#dau7">
+          <layout:Attribute label="nombre" attribute="ent3#att19"/>
+          <layout:Attribute attribute="ent3#att20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#inu14">
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att8"/>
+          <layout:Attribute attribute="ent1#att10"/>
+          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Link link="sv1#page10#inu14#ln71"/>
+          <layout:Link link="sv1#page10#inu14#ln131"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#enu11" layout:unitVisibilityConditionVariable="sv1#page10#var8">
+          <layout:Field field="sv1#page10#enu11#fld35"/>
+          <layout:Link link="sv1#page10#enu11#ln78"/>
+          <layout:Link link="sv1#page10#enu11#ln79"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#dau9">
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att11"/>
+          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Attribute attribute="ent1#att14"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#enu14" layout:unitVisibilityConditionVariable="sv1#page10#var9">
+          <layout:Field field="sv1#page10#enu14#fld44"/>
+          <layout:Field field="sv1#page10#enu14#fld45"/>
+          <layout:Field field="sv1#page10#enu14#fld46"/>
+          <layout:Link link="sv1#page10#enu14#ln87"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#enu19">
+          <layout:Link link="sv1#page10#enu19#ln89"/>
+          <layout:Field field="sv1#page10#enu19#fld47"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#enu20" layout:unitVisibilityConditionVariable="sv1#page10#var1">
+          <layout:Link link="sv1#page10#enu20#ln90"/>
+          <layout:Field field="sv1#page10#enu20#fld48"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv1#page10#var8" name="mostrarFormLista" type="boolean" value="false"/>
+  <Variable id="sv1#page10#var9" name="mostrarProgresoSerie" type="boolean" value="false"/>
+  <Variable id="sv1#page10#var1" name="mostrarValorar" type="boolean" value="false"/>
+</Page>

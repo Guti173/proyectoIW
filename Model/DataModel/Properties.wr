@@ -50,7 +50,8 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="DB_Proyecto" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ProyectoIW" username="postgres" password="YWRtaW4=" cryptedPassword="true" schema="public"/>
+  <db:Database id="db1" name="DB_Proyecto" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ProyectoIW" username="postgres" password="YWRtaW4=" cryptedPassword="true" schema="public">
+  </db:Database>
   <Entity gr:x="150" gr:y="525" id="ent1" name="Serie" duration="persistent" attributeOrder="ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11 ent1#att12 ent1#att13 ent1#att14" db:database="db1" db:table="serie">
     <Attribute id="ent1#att5" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att6" name="titulo" type="string" db:column="titulo"/>
@@ -59,8 +60,12 @@
     <Attribute id="ent1#att9" name="fechaFin" type="date" db:column="fechafin"/>
     <Attribute id="ent1#att10" name="imagenPortada" type="url" contentType="url" db:column="imagenportada"/>
     <Attribute id="ent1#att11" name="numneroEpisodios" type="integer" db:column="numneroepisodios"/>
-    <Attribute id="ent1#att13" name="valoracionMedia" type="float" db:column="valoracionmedia"/>
-    <Attribute id="ent1#att14" name="totalValoraciones" type="integer" db:column="totalvaloraciones"/>
+    <Attribute id="ent1#att13" name="valoracionMedia" type="float" derivationQuery="calculated::avg(Self.rel9#role17(as Var1).ent5#att27)" db:table="serie_valoracionmedia_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent1#att5" name="oid"/>
+    </Attribute>
+    <Attribute id="ent1#att14" name="totalValoraciones" type="integer" derivationQuery="calculated::count(Self.rel9#role17(as Var1))" db:table="serie_totalvaloraciones_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent1#att5" name="oid"/>
+    </Attribute>
     <Attribute id="ent1#att12" name="estado" type="string" db:column="estado"/>
   </Entity>
   <Entity gr:x="435" gr:y="685" id="ent2" name="Genero" duration="persistent" attributeOrder="ent2#att15 ent2#att16 ent2#att17" db:database="db1" db:table="genero">
