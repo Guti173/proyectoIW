@@ -26,9 +26,9 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page5#inu2">
           <layout:Attribute attribute="ent1#att6"/>
-          <layout:Attribute attribute="ent1#att10"/>
-          <layout:Attribute attribute="ent1#att11"/>
-          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Attribute attribute="ent1#att10" label="Portada"/>
+          <layout:Attribute attribute="ent1#att11" label="Numero de episodios"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
           <layout:Link link="sv2#page5#inu2#ln3"/>
         </layout:Unit>
       </layout:Cell>
@@ -49,12 +49,12 @@
         <layout:Unit unitId="sv2#page5#dau2">
           <layout:Attribute attribute="ent1#att6"/>
           <layout:Attribute attribute="ent1#att7"/>
-          <layout:Attribute attribute="ent1#att8"/>
-          <layout:Attribute attribute="ent1#att9"/>
-          <layout:Attribute attribute="ent1#att10"/>
-          <layout:Attribute attribute="ent1#att11"/>
-          <layout:Attribute attribute="ent1#att13"/>
-          <layout:Attribute attribute="ent1#att14"/>
+          <layout:Attribute attribute="ent1#att8" label="Estreno"/>
+          <layout:Attribute attribute="ent1#att9" label="Fecha fin"/>
+          <layout:Attribute attribute="ent1#att10" label="Portada"/>
+          <layout:Attribute attribute="ent1#att11" label="Numero de episodios"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
+          <layout:Attribute attribute="ent1#att14" label="Total de valoraciones"/>
           <layout:Attribute attribute="ent1#att12"/>
         </layout:Unit>
       </layout:Cell>
@@ -93,9 +93,9 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page5#inu4">
           <layout:Attribute attribute="ent1#att6"/>
-          <layout:Attribute attribute="ent1#att10"/>
-          <layout:Attribute attribute="ent1#att11"/>
-          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Attribute attribute="ent1#att10" label="Portada"/>
+          <layout:Attribute attribute="ent1#att11" label="Numero de episodios"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
           <layout:Link link="sv2#page5#inu4#ln6"/>
         </layout:Unit>
       </layout:Cell>

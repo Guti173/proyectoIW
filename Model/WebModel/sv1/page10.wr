@@ -145,8 +145,8 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page10#inu12">
-          <layout:Attribute attribute="ent3#att19"/>
-          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att19" label="nombre"/>
+          <layout:Attribute attribute="ent3#att20" label="fecha agregado"/>
           <layout:Link link="sv1#page10#inu12#ln63"/>
         </layout:Unit>
       </layout:Cell>
@@ -165,8 +165,8 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page10#dau7">
-          <layout:Attribute label="nombre" attribute="ent3#att19"/>
-          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att19" label="nombre"/>
+          <layout:Attribute attribute="ent3#att20" label="fecha agregado"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -185,9 +185,9 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page10#inu14">
           <layout:Attribute attribute="ent1#att6"/>
-          <layout:Attribute attribute="ent1#att8"/>
-          <layout:Attribute attribute="ent1#att10"/>
-          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Attribute attribute="ent1#att8" label="fecha estreno"/>
+          <layout:Attribute attribute="ent1#att10" label="portada"/>
+          <layout:Attribute attribute="ent1#att13" label="valoracion media"/>
           <layout:Link link="sv1#page10#inu14#ln71"/>
           <layout:Link link="sv1#page10#inu14#ln131"/>
         </layout:Unit>
@@ -228,10 +228,10 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page10#dau9">
           <layout:Attribute attribute="ent1#att6"/>
-          <layout:Attribute attribute="ent1#att11"/>
+          <layout:Attribute attribute="ent1#att11" label="Numero de episodios"/>
           <layout:Attribute attribute="ent1#att12"/>
-          <layout:Attribute attribute="ent1#att13"/>
-          <layout:Attribute attribute="ent1#att14"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
+          <layout:Attribute attribute="ent1#att14" label="Total de valoraciones"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -249,9 +249,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page10#enu14" layout:unitVisibilityConditionVariable="sv1#page10#var9">
-          <layout:Field field="sv1#page10#enu14#fld44"/>
-          <layout:Field field="sv1#page10#enu14#fld45"/>
-          <layout:Field field="sv1#page10#enu14#fld46"/>
+          <layout:Field field="sv1#page10#enu14#fld44" label="Episodios vistos"/>
+          <layout:Field field="sv1#page10#enu14#fld45" label="Fecha de inicio"/>
+          <layout:Field field="sv1#page10#enu14#fld46" label="Fecha de fin"/>
           <layout:Link link="sv1#page10#enu14#ln87"/>
         </layout:Unit>
       </layout:Cell>

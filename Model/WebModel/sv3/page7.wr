@@ -78,9 +78,9 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page7#inu8">
           <layout:Attribute attribute="ent1#att6"/>
-          <layout:Attribute attribute="ent1#att10"/>
-          <layout:Attribute attribute="ent1#att11"/>
-          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Attribute attribute="ent1#att10" label="Portada"/>
+          <layout:Attribute attribute="ent1#att11" label="Numero de episodios"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
           <layout:Link link="sv3#page7#inu8#ln24"/>
         </layout:Unit>
       </layout:Cell>
@@ -100,9 +100,9 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page7#inu6">
           <layout:Attribute attribute="ent1#att6"/>
-          <layout:Attribute attribute="ent1#att10"/>
-          <layout:Attribute attribute="ent1#att11"/>
-          <layout:Attribute attribute="ent1#att13"/>
+          <layout:Attribute attribute="ent1#att10" label="Portada"/>
+          <layout:Attribute attribute="ent1#att11" label="Numero de episodios"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
           <layout:Link link="sv3#page7#inu6#ln20"/>
         </layout:Unit>
       </layout:Cell>
@@ -123,12 +123,12 @@
         <layout:Unit unitId="sv3#page7#dau5">
           <layout:Attribute attribute="ent1#att6"/>
           <layout:Attribute attribute="ent1#att7"/>
-          <layout:Attribute attribute="ent1#att8"/>
-          <layout:Attribute attribute="ent1#att9"/>
-          <layout:Attribute attribute="ent1#att10"/>
-          <layout:Attribute attribute="ent1#att11"/>
-          <layout:Attribute attribute="ent1#att13"/>
-          <layout:Attribute attribute="ent1#att14"/>
+          <layout:Attribute attribute="ent1#att8" label="Estreno"/>
+          <layout:Attribute attribute="ent1#att9" label="Fecha fin"/>
+          <layout:Attribute attribute="ent1#att10" label="Portada"/>
+          <layout:Attribute attribute="ent1#att11" label="Numero de episodios"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
+          <layout:Attribute attribute="ent1#att14" label="Total de valoraciones"/>
           <layout:Attribute attribute="ent1#att12"/>
           <layout:Link link="sv3#page7#dau5#ln26"/>
           <layout:Link link="sv3#page7#dau5#ln37"/>
@@ -151,7 +151,7 @@
         <layout:Unit unitId="sv3#page7#inu11">
           <layout:Attribute attribute="ent9#att37"/>
           <layout:Attribute attribute="ent9#att38"/>
-          <layout:Attribute attribute="ent9#att39"/>
+          <layout:Attribute attribute="ent9#att39" label="Fecha de reporte"/>
           <layout:Attribute attribute="ent9#att40"/>
           <layout:Attribute attribute="rel15#role30.ent6#att29"/>
         </layout:Unit>
@@ -173,7 +173,7 @@
         <layout:Unit unitId="sv3#page7#inu9">
           <layout:Attribute attribute="ent6#att28"/>
           <layout:Attribute attribute="ent6#att29"/>
-          <layout:Attribute attribute="ent6#att30"/>
+          <layout:Attribute attribute="ent6#att30" label="Fecha de publicacion"/>
           <layout:Attribute attribute="ent6#att31"/>
           <layout:Attribute attribute="rel10#role20.userName"/>
           <layout:Link link="sv3#page7#inu9#ln32"/>
@@ -197,7 +197,7 @@
         <layout:Unit unitId="sv3#page7#inu10">
           <layout:Link link="sv3#page7#inu10#ln31"/>
           <layout:Attribute attribute="ent9#att38"/>
-          <layout:Attribute attribute="ent9#att39"/>
+          <layout:Attribute attribute="ent9#att39" label="Fecha de reporte"/>
           <layout:Attribute attribute="ent9#att40"/>
           <layout:Attribute attribute="rel14#role28.userName"/>
           <layout:Attribute attribute="rel15#role30.ent6#att28"/>
@@ -220,7 +220,7 @@
         <layout:Unit unitId="sv3#page7#inu13">
           <layout:Attribute attribute="ent9#att37"/>
           <layout:Attribute attribute="ent9#att38"/>
-          <layout:Attribute attribute="ent9#att39"/>
+          <layout:Attribute attribute="ent9#att39" label="Fecha de reporte"/>
           <layout:Attribute attribute="ent9#att40"/>
         </layout:Unit>
       </layout:Cell>

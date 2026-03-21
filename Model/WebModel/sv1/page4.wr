@@ -41,7 +41,7 @@
           <layout:Attribute attribute="email"/>
           <layout:Attribute attribute="User#att1"/>
           <layout:Attribute attribute="User#att2"/>
-          <layout:Attribute attribute="User#att3"/>
+          <layout:Attribute attribute="User#att3" label="Foto de perfil"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -63,7 +63,7 @@
           <layout:Field field="sv1#page4#enu5#fld11"/>
           <layout:Field field="sv1#page4#enu5#fld21"/>
           <layout:Field field="sv1#page4#enu5#fld10"/>
-          <layout:Field field="sv1#page4#enu5#fld22"/>
+          <layout:Field field="sv1#page4#enu5#fld22" label="Foto de perfil"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

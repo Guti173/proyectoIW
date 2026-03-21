@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="A&#241;adirAmigo" landmark="true" protected="false" gr:x="480" gr:y="2480">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="A&#241;adir amigo" landmark="true" protected="false" gr:x="480" gr:y="2480">
   <ContentUnits>
     <IndexUnit id="sv1#page13#inu18" name="Usuarios" linkOrder="sv1#page13#inu18#ln83" gr:x="20" gr:y="0" entity="User" displayAttributes="userName User#att1 User#att2">
       <Selector id="sv1#page13#inu18#su44" defaultPolicy="fill" booleanOperator="and">
@@ -57,8 +57,8 @@
         <layout:Unit unitId="sv1#page13#inu24">
           <layout:Attribute attribute="ent8#att33"/>
           <layout:Attribute attribute="ent8#att34"/>
-          <layout:Attribute attribute="ent8#att35"/>
-          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att35" label="Fecha solicitud"/>
+          <layout:Attribute attribute="ent8#att36" label="Fecha de respuesta"/>
           <layout:Attribute attribute="rel16#role32.userOID"/>
           <layout:Attribute attribute="rel16#role32.userName"/>
           <layout:Attribute attribute="rel17#role34.userOID"/>

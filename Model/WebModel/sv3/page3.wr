@@ -70,8 +70,8 @@
         <layout:Unit unitId="sv3#page3#inu3">
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att6"/>
-          <layout:Attribute attribute="ent1#att13"/>
-          <layout:Attribute attribute="ent1#att14"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
+          <layout:Attribute attribute="ent1#att14" label="Total de valoraciones"/>
           <layout:Link link="sv3#page3#inu3#ln15"/>
           <layout:Link link="sv3#page3#inu3#ln16"/>
           <layout:Link link="sv3#page3#inu3#ln14"/>
@@ -95,13 +95,13 @@
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att6"/>
           <layout:Attribute attribute="ent1#att7"/>
-          <layout:Attribute attribute="ent1#att8"/>
-          <layout:Attribute attribute="ent1#att9"/>
-          <layout:Attribute attribute="ent1#att10"/>
-          <layout:Attribute attribute="ent1#att11"/>
+          <layout:Attribute attribute="ent1#att8" label="Estreno"/>
+          <layout:Attribute attribute="ent1#att9" label="Fecha fin"/>
+          <layout:Attribute attribute="ent1#att10" label="Portada"/>
+          <layout:Attribute attribute="ent1#att11" label="Numero de episodios"/>
           <layout:Attribute attribute="ent1#att12"/>
-          <layout:Attribute attribute="ent1#att13"/>
-          <layout:Attribute attribute="ent1#att14"/>
+          <layout:Attribute attribute="ent1#att13" label="Valoracion media"/>
+          <layout:Attribute attribute="ent1#att14" label="Total de valoraciones"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -141,12 +141,12 @@
           <layout:Field field="sv3#page3#enu3#fld9"/>
           <layout:Field field="sv3#page3#enu3#fld12"/>
           <layout:Field field="sv3#page3#enu3#fld13"/>
-          <layout:Field field="sv3#page3#enu3#fld14"/>
-          <layout:Field field="sv3#page3#enu3#fld15"/>
-          <layout:Field field="sv3#page3#enu3#fld16"/>
-          <layout:Field field="sv3#page3#enu3#fld17"/>
-          <layout:Field field="sv3#page3#enu3#fld18"/>
-          <layout:Field field="sv3#page3#enu3#fld19"/>
+          <layout:Field field="sv3#page3#enu3#fld14" label="Fecha de estreno"/>
+          <layout:Field field="sv3#page3#enu3#fld15" label="Fecha fin"/>
+          <layout:Field field="sv3#page3#enu3#fld16" label="Portada"/>
+          <layout:Field field="sv3#page3#enu3#fld17" label="Numero de episodios"/>
+          <layout:Field field="sv3#page3#enu3#fld18" label="Valoracion media"/>
+          <layout:Field field="sv3#page3#enu3#fld19" label="Total de valoraciones"/>
           <layout:Field field="sv3#page3#enu3#fld20"/>
           <layout:Field field="sv3#page3#enu3#msfld2"/>
         </layout:Unit>
