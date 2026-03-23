@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page7" name="ListaSeries" landmark="true" gr:x="330" gr:y="1240">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page7" name="GestionComentarios" landmark="true" gr:x="330" gr:y="1240">
   <ContentUnits>
-    <IndexUnit id="sv3#page7#inu6" name="Lista Series" linkOrder="sv3#page7#inu6#ln20" gr:x="240" gr:y="0" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13">
+    <IndexUnit id="sv3#page7#inu6" name="Serie Buscada" linkOrder="sv3#page7#inu6#ln20" gr:x="240" gr:y="0" entity="ent1" displayAttributes="ent1#att6 ent1#att10 ent1#att11 ent1#att13">
       <Link id="sv3#page7#inu6#ln20" name="Mostrar Serie" to="sv3#page7#dau5" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="24,84,-91,-36"/>
       <Selector id="sv3#page7#inu6#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page7#inu6#su13#kcond7" name="KeyCondition2" predicate="in" implied="false"/>
