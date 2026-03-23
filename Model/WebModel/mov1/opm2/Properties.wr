@@ -35,7 +35,7 @@
       <KOLink id="mov1#opm2#cru12#kln15" name="KOFlow15" to="mov1#opm2#kocu2" automaticCoupling="true"/>
       <OKLink id="mov1#opm2#cru12#oln55" name="OKFlow55" to="mov1#opm2#okcu2" automaticCoupling="true"/>
     </CreateUnit>
-    <OKCollectorUnit gr:x="1350" gr:y="135" id="mov1#opm2#okcu2" name="OK Port2"/>
-    <KOCollectorUnit gr:x="1350" gr:y="330" id="mov1#opm2#kocu2" name="KO Port2"/>
+    <OKCollectorUnit gr:x="990" gr:y="135" id="mov1#opm2#okcu2" name="OK Port2"/>
+    <KOCollectorUnit gr:x="990" gr:y="330" id="mov1#opm2#kocu2" name="KO Port2"/>
   </OperationUnits>
 </OperationModule>

@@ -64,7 +64,7 @@
         <LinkParameter id="sv1#page10#inu14#ln131#par110" name="true_mostrarValorar" sourceValue="true" targetVariable="sv1#page10#var1"/>
       </Link>
     </IndexUnit>
-    <EntryUnit id="sv1#page10#enu11" name="A&#241;adir/Editar" linkOrder="sv1#page10#enu11#ln78 sv1#page10#enu11#ln79" gr:x="195" gr:y="310" entity="ent3">
+    <EntryUnit id="sv1#page10#enu11" name="Editar Lista" linkOrder="sv1#page10#enu11#ln78 sv1#page10#enu11#ln79" gr:x="200" gr:y="320" entity="ent3">
       <Field id="sv1#page10#enu11#fld35" name="Nombre" type="string" modifiable="true" attribute="ent3#att19"/>
       <Link id="sv1#page10#enu11#ln78" name="Actualizar" to="sv1#mfu10" type="normal" validate="true">
         <LinkParameter id="sv1#page10#enu11#ln78#par113" name="Key [oid]_KeyCondition25 [oid]" source="key.ent3#att18" target="sv1#mfu10#su33#kcond29.ent3#att18"/>
@@ -74,7 +74,7 @@
         <LinkParameter id="sv1#page10#enu11#ln79#par117" name="Key [oid]_KeyCondition26 [oid]" source="key.ent3#att18" target="sv1#dlu6#su34#kcond31.ent3#att18"/>
       </Link>
     </EntryUnit>
-    <DataUnit id="sv1#page10#dau9" name="Detalles de la serie" gr:x="665" gr:y="300" entity="ent1" displayAttributes="ent1#att6 ent1#att11 ent1#att12 ent1#att13 ent1#att14">
+    <DataUnit id="sv1#page10#dau9" name="Detalles de la serie" gr:x="635" gr:y="295" entity="ent1" displayAttributes="ent1#att6 ent1#att11 ent1#att12 ent1#att13 ent1#att14">
       <Selector id="sv1#page10#dau9#su44" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page10#dau9#su44#kcond39" name="KeyCondition27" predicate="in" implied="false"/>
       </Selector>
@@ -97,7 +97,7 @@
         <LinkParameter id="sv1#page10#seu14#ln86#par141" name="oid_ProgresoKey" source="ent4#att21Array" target="sv1#miu4.mov1#opm1#icu1#icp1"/>
       </Link>
     </SelectorUnit>
-    <EntryUnit id="sv1#page10#enu14" name="Tu Progreso" linkOrder="sv1#page10#enu14#ln87" gr:x="870" gr:y="350" entity="ent4">
+    <EntryUnit id="sv1#page10#enu14" name="Tu Progreso" linkOrder="sv1#page10#enu14#ln87" gr:x="955" gr:y="430" entity="ent4">
       <Field id="sv1#page10#enu14#fld44" name="episodiosVistos" type="integer" modifiable="true" attribute="ent4#att22"/>
       <Field id="sv1#page10#enu14#fld45" name="fechaInicio" type="date" modifiable="true" attribute="ent4#att23"/>
       <Field id="sv1#page10#enu14#fld46" name="fechaFin" type="date" modifiable="true" attribute="ent4#att24"/>
@@ -107,12 +107,12 @@
         <LinkParameter id="sv1#page10#enu14#ln87#par201" name="fechaInicio_FechaInicio" source="sv1#page10#enu14#fld45" target="sv1#miu4.mov1#opm1#icu1#icp3"/>
       </Link>
     </EntryUnit>
-    <TimeUnit id="sv1#page10#tmu3" name="Ahora" gr:x="1015" gr:y="445">
+    <TimeUnit id="sv1#page10#tmu3" name="Ahora" gr:x="1040" gr:y="335">
       <Link id="sv1#page10#tmu3#ln88" name="Flow57" to="sv1#miu4" type="transport" validate="true">
         <LinkParameter id="sv1#page10#tmu3#ln88#par202" name="Current/Input Timestamp_NowTs" source="currentTimestamp" target="sv1#miu4.mov1#opm1#icu1#icp7"/>
       </Link>
     </TimeUnit>
-    <EntryUnit id="sv1#page10#enu19" name="Crear Lista" linkOrder="sv1#page10#enu19#ln89" gr:x="10" gr:y="285" entity="ent3">
+    <EntryUnit id="sv1#page10#enu19" name="Crear Lista" linkOrder="sv1#page10#enu19#ln89" gr:x="5" gr:y="265" entity="ent3">
       <Field id="sv1#page10#enu19#fld47" name="nombre" type="string" modifiable="true" attribute="ent3#att19"/>
       <Link id="sv1#page10#enu19#ln89" name="Crear" to="sv1#cru9" type="normal" validate="true">
         <LinkParameter id="sv1#page10#enu19#ln89#par203" name="nombre_tipoLista" source="sv1#page10#enu19#fld47" target="sv1#cru9.ent3#att19"/>
@@ -127,7 +127,7 @@
       </Link>
       <Field id="sv1#page10#enu20#fld49" name="serieKey" type="integer" modifiable="true" hidden="true"/>
     </EntryUnit>
-    <SelectorUnit id="sv1#page10#seu16" name="SelValoracionActual" gr:x="420" gr:y="525" entity="ent5">
+    <SelectorUnit id="sv1#page10#seu16" name="SelValoracionActual" gr:x="540" gr:y="490" entity="ent5">
       <Selector id="sv1#page10#seu16#su46" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page10#seu16#su46#rcond12" name="valUsuario" predicate="in" implied="false" role="rel8#role15"/>
         <RelationshipRoleCondition id="sv1#page10#seu16#su46#rcond19" name="valSerie" predicate="in" implied="false" role="rel9#role17"/>
@@ -140,6 +140,12 @@
       </Link>
     </SelectorUnit>
     <MultiMessageUnit gr:x="1015" gr:y="615" id="sv1#page10#mssu5" name="ErrorValoracion"/>
+    <TimeUnit gr:x="155" gr:y="570" id="sv1#page10#tmu1" name="Ahora">
+      <Link id="sv1#page10#tmu1#ln38" name="Flow38" to="sv1#cru9" type="transport" validate="true">
+        <LinkParameter id="sv1#page10#tmu1#ln38#par111" name="Current/Input Date_fechaAgregado" source="currentDate" target="sv1#cru9.ent3#att20"/>
+      </Link>
+    </TimeUnit>
+    <MultiMessageUnit gr:x="130" gr:y="645" id="sv1#page10#mssu6" name="ErrorLista"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -324,6 +330,22 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page10#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#mssu6"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

@@ -133,8 +133,11 @@
       </Selector>
       <OKLink id="sv1#mfu14#oln45" name="OKFlow21" to="sv1#page14" automaticCoupling="true" gr:bendpoints="112,-48,-153,-18"/>
     </ModifyUnit>
-    <CreateUnit id="sv1#cru9" name="Crear Lista" gr:x="10" gr:y="2040" entity="ent3">
+    <CreateUnit id="sv1#cru9" name="Crear Lista" gr:x="75" gr:y="2030" entity="ent3">
       <OKLink id="sv1#cru9#oln33" name="OKFlow17" to="sv1#page10" automaticCoupling="true"/>
+      <KOLink id="sv1#cru9#kln10" name="KOFlow10" to="sv1#page10#mssu6">
+        <LinkParameter id="sv1#cru9#kln10#par112" name="ERROR AL CREAR LA LISTA!!_Shown Messages" sourceValue="ERROR AL CREAR LA LISTA!!" target="sv1#page10#mssu6.shownMessages"/>
+      </KOLink>
     </CreateUnit>
     <ModuleInstanceUnit id="sv1#miu4" name="GuardarProgreso" gr:x="1375" gr:y="1430" action="true" moduleId="mov1#opm1">
       <OKLink id="sv1#miu4#oln34" name="OKFlow24" to="sv1#page10" automaticCoupling="true"/>
@@ -147,14 +150,20 @@
         <KeyCondition id="sv1#mfu10#su33#kcond29" name="KeyCondition25" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv1#mfu10#oln42" name="OKFlow18" to="sv1#page10" automaticCoupling="true"/>
+      <KOLink id="sv1#mfu10#kln12" name="KOFlow12" to="sv1#page10#mssu6">
+        <LinkParameter id="sv1#mfu10#kln12#par207" name="ERROR AL EDITAR LA LISTA!!_Shown Messages" sourceValue="ERROR AL EDITAR LA LISTA!!" target="sv1#page10#mssu6.shownMessages"/>
+      </KOLink>
     </ModifyUnit>
     <DeleteUnit id="sv1#dlu6" name="Eliminar" gr:x="480" gr:y="2045" entity="ent3">
       <Selector id="sv1#dlu6#su34" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#dlu6#su34#kcond31" name="KeyCondition26" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv1#dlu6#oln43" name="OKFlow20" to="sv1#page10" automaticCoupling="true"/>
+      <KOLink id="sv1#dlu6#kln16" name="KOFlow16" to="sv1#page10#mssu6">
+        <LinkParameter id="sv1#dlu6#kln16#par208" name="ERROR AL ELIMINAR LA LISTA!!_Shown Messages" sourceValue="ERROR AL ELIMINAR LA LISTA!!" target="sv1#page10#mssu6.shownMessages"/>
+      </KOLink>
     </DeleteUnit>
-    <ModuleInstanceUnit id="sv1#miu5" gr:x="865" gr:y="1950" action="true" moduleId="mov1#opm2">
+    <ModuleInstanceUnit id="sv1#miu5" gr:x="855" gr:y="1985" action="true" moduleId="mov1#opm2">
       <OKLink id="sv1#miu5#oln44" name="OKFlow65" to="sv1#page10" automaticCoupling="true"/>
       <KOLink id="sv1#miu5#kln11" name="KOFlow11" to="sv1#page10#mssu5">
         <LinkParameter id="sv1#miu5#kln11#par211" name="Error al actualizar la valoraci&#243;n de la serie_Shown Messages" sourceValue="Error al actualizar la valoracion de la serie" target="sv1#page10#mssu5.shownMessages"/>
