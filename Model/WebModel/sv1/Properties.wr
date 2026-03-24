@@ -24,7 +24,7 @@
       </OKLink>
     </ConnectUnit>
     <LogoutUnit gr:x="2225" gr:y="80" id="sv1#lou2" name="Cerrar sesi&#243;n" landmark="true" siteView="sv2"/>
-    <ModifyUnit id="sv1#mfu9" name="Actualizar Likes" gr:x="1170" gr:y="1165" entity="ent6">
+    <ModifyUnit id="sv1#mfu9" name="Actualizar Likes" gr:x="1015" gr:y="1130" entity="ent6">
       <Selector id="sv1#mfu9#su47" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#mfu9#su47#kcond32" name="KeyCondition34" predicate="in" implied="false"/>
       </Selector>
@@ -43,25 +43,25 @@
         <LinkParameter id="sv1#seu15#oln35#par187" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv1#page1#gtu4#ln67#par186" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <CreateUnit id="sv1#cru8" name="Crear Like Comentario" gr:x="1665" gr:y="1150" entity="ent7">
+    <CreateUnit id="sv1#cru8" name="Crear Like Comentario" gr:x="1510" gr:y="1115" entity="ent7">
       <OKLink id="sv1#cru8#oln36" name="OKFlow22" to="sv1#mathu10">
         <LinkParameter id="sv1#cru8#oln36#par189" name="contadorLikes_PASSING" sourceLinkParameter="sv1#inn5#kln9#par179" passing="true"/>
         <LinkParameter id="sv1#cru8#oln36#par193" name="contadorLikes_PASSING_contadorLikes" sourceLinkParameter="sv1#inn5#kln9#par179" target="sv1#mathu10#mathv10"/>
       </OKLink>
     </CreateUnit>
-    <MathUnit id="sv1#mathu9" name="Decrementar like" gr:x="1385" gr:y="1120" resultType="integer" defaultExpression="contadorLikes - 1">
+    <MathUnit id="sv1#mathu9" name="Decrementar like" gr:x="1230" gr:y="1085" resultType="integer" defaultExpression="contadorLikes - 1">
       <OKLink id="sv1#mathu9#oln37" name="OKFlow21" to="sv1#mfu9">
         <LinkParameter id="sv1#mathu9#oln37#par137" name="Result_contadorLikes" source="result" target="sv1#mfu9.ent6#att42"/>
       </OKLink>
       <MathVariable id="sv1#mathu9#mathv9" name="contadorLikes"/>
     </MathUnit>
-    <MathUnit id="sv1#mathu10" name="Incrementar like" gr:x="1475" gr:y="1230" resultType="integer" defaultExpression="contadorLikes + 1">
+    <MathUnit id="sv1#mathu10" name="Incrementar like" gr:x="1320" gr:y="1195" resultType="integer" defaultExpression="contadorLikes + 1">
       <OKLink id="sv1#mathu10#oln38" name="OKFlow24" to="sv1#mfu9">
         <LinkParameter id="sv1#mathu10#oln38#par138" name="Result_contadorLikes" source="result" target="sv1#mfu9.ent6#att42"/>
       </OKLink>
       <MathVariable id="sv1#mathu10#mathv10" name="contadorLikes"/>
     </MathUnit>
-    <IsNotNullUnit id="sv1#inn5" name="Is Not Null2" gr:x="1715" gr:y="975" emptyStringAsNull="true">
+    <IsNotNullUnit id="sv1#inn5" name="Is Not Null2" gr:x="1640" gr:y="990" emptyStringAsNull="true">
       <KOLink id="sv1#inn5#kln9" name="KOFlow5" to="sv1#cru8">
         <LinkParameter id="sv1#inn5#kln9#par179" name="contadorLikes_PASSING" sourceLinkParameter="sv1#seu15#oln35#par178" passing="true"/>
         <LinkParameter id="sv1#inn5#kln9#par188" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv1#seu15#oln35#par187" passing="true"/>
@@ -72,7 +72,7 @@
         <LinkParameter id="sv1#inn5#oln39#par190" name="contadorLikes_PASSING" sourceLinkParameter="sv1#seu15#oln35#par178" passing="true"/>
       </OKLink>
     </IsNotNullUnit>
-    <DeleteUnit id="sv1#dlu7" name="Delete5" gr:x="1540" gr:y="1005" entity="ent7">
+    <DeleteUnit id="sv1#dlu7" name="Delete5" gr:x="1385" gr:y="970" entity="ent7">
       <Selector id="sv1#dlu7#su49" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#dlu7#su49#kcond33" name="KeyCondition35" predicate="in" implied="false"/>
       </Selector>
