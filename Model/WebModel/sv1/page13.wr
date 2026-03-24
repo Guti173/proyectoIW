@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="A&#241;adir amigo" landmark="true" protected="false" gr:x="2205" gr:y="495">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="A&#241;adir amigo" landmark="true" protected="false" gr:x="2300" gr:y="590">
   <ContentUnits>
     <IndexUnit id="sv1#page13#inu18" name="Usuarios" linkOrder="sv1#page13#inu18#ln83" gr:x="20" gr:y="0" entity="User" displayAttributes="userName User#att1 User#att2">
       <Selector id="sv1#page13#inu18#su44" defaultPolicy="fill" booleanOperator="and">

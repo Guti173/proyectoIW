@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Usuarios" linkVisibilityPolicy="always" protected="true" landmarks="sv1#page7 sv1#page1 sv1#page4 sv1#lou2 sv1#page14 sv1#page13 sv1#page10" layout:pageLayout="WebRatio/Basic" homePage="sv1#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Usuarios" linkVisibilityPolicy="always" protected="true" landmarks="sv1#page1 sv1#page4 sv1#lou2 sv1#page14 sv1#page13 sv1#page10" layout:pageLayout="WebRatio/Basic" homePage="sv1#page1">
   <OperationUnits>
     <SelectorUnit gr:x="670" gr:y="170" id="sv1#seu1" name="Selector1" entity="ent1">
       <Selector id="sv1#seu1#su2" defaultPolicy="fill" booleanOperator="and">
@@ -24,13 +24,15 @@
       </OKLink>
     </ConnectUnit>
     <LogoutUnit gr:x="2225" gr:y="80" id="sv1#lou2" name="Cerrar sesi&#243;n" landmark="true" siteView="sv2"/>
-    <ModifyUnit id="sv1#mfu9" name="Actualizar Likes" gr:x="1290" gr:y="1045" entity="ent6">
+    <ModifyUnit id="sv1#mfu9" name="Actualizar Likes" gr:x="1170" gr:y="1165" entity="ent6">
       <Selector id="sv1#mfu9#su47" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#mfu9#su47#kcond32" name="KeyCondition34" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv1#mfu9#oln41" name="OKFlow41" to="sv1#page1" automaticCoupling="true"/>
+      <OKLink id="sv1#mfu9#oln41" name="OKFlow41" to="sv1#page1">
+        <LinkParameter id="sv1#mfu9#oln41#par170" name="false_mostrarFormCrearCom" sourceValue="false" targetVariable="sv1#page1#var5"/>
+      </OKLink>
     </ModifyUnit>
-    <SelectorUnit id="sv1#seu15" name="Seleccionar like a comentario" gr:x="1555" gr:y="720" entity="ent7">
+    <SelectorUnit id="sv1#seu15" name="Seleccionar like a comentario" gr:x="1435" gr:y="840" entity="ent7">
       <Selector id="sv1#seu15#su48" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#seu15#su48#acond12" name="like" predicate="eq" booleanOperator="and" implied="false" attributes="rel13#role26.ent6#att28"/>
         <AttributesCondition id="sv1#seu15#su48#acond13" name="usuario" predicate="eq" booleanOperator="and" implied="false" attributes="rel12#role24.userOID"/>
@@ -41,25 +43,25 @@
         <LinkParameter id="sv1#seu15#oln35#par187" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv1#page1#gtu4#ln67#par186" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <CreateUnit id="sv1#cru8" name="Crear Like Comentario" gr:x="1785" gr:y="1030" entity="ent7">
+    <CreateUnit id="sv1#cru8" name="Crear Like Comentario" gr:x="1665" gr:y="1150" entity="ent7">
       <OKLink id="sv1#cru8#oln36" name="OKFlow22" to="sv1#mathu10">
         <LinkParameter id="sv1#cru8#oln36#par189" name="contadorLikes_PASSING" sourceLinkParameter="sv1#inn5#kln9#par179" passing="true"/>
         <LinkParameter id="sv1#cru8#oln36#par193" name="contadorLikes_PASSING_contadorLikes" sourceLinkParameter="sv1#inn5#kln9#par179" target="sv1#mathu10#mathv10"/>
       </OKLink>
     </CreateUnit>
-    <MathUnit id="sv1#mathu9" name="Decrementar like" gr:x="1505" gr:y="1000" resultType="integer" defaultExpression="contadorLikes - 1">
+    <MathUnit id="sv1#mathu9" name="Decrementar like" gr:x="1385" gr:y="1120" resultType="integer" defaultExpression="contadorLikes - 1">
       <OKLink id="sv1#mathu9#oln37" name="OKFlow21" to="sv1#mfu9">
         <LinkParameter id="sv1#mathu9#oln37#par137" name="Result_contadorLikes" source="result" target="sv1#mfu9.ent6#att42"/>
       </OKLink>
       <MathVariable id="sv1#mathu9#mathv9" name="contadorLikes"/>
     </MathUnit>
-    <MathUnit id="sv1#mathu10" name="Incrementar like" gr:x="1595" gr:y="1110" resultType="integer" defaultExpression="contadorLikes + 1">
+    <MathUnit id="sv1#mathu10" name="Incrementar like" gr:x="1475" gr:y="1230" resultType="integer" defaultExpression="contadorLikes + 1">
       <OKLink id="sv1#mathu10#oln38" name="OKFlow24" to="sv1#mfu9">
         <LinkParameter id="sv1#mathu10#oln38#par138" name="Result_contadorLikes" source="result" target="sv1#mfu9.ent6#att42"/>
       </OKLink>
       <MathVariable id="sv1#mathu10#mathv10" name="contadorLikes"/>
     </MathUnit>
-    <IsNotNullUnit id="sv1#inn5" name="Is Not Null2" gr:x="1835" gr:y="855" emptyStringAsNull="true">
+    <IsNotNullUnit id="sv1#inn5" name="Is Not Null2" gr:x="1715" gr:y="975" emptyStringAsNull="true">
       <KOLink id="sv1#inn5#kln9" name="KOFlow5" to="sv1#cru8">
         <LinkParameter id="sv1#inn5#kln9#par179" name="contadorLikes_PASSING" sourceLinkParameter="sv1#seu15#oln35#par178" passing="true"/>
         <LinkParameter id="sv1#inn5#kln9#par188" name="UserCtxParam.oid_PASSING" sourceLinkParameter="sv1#seu15#oln35#par187" passing="true"/>
@@ -70,7 +72,7 @@
         <LinkParameter id="sv1#inn5#oln39#par190" name="contadorLikes_PASSING" sourceLinkParameter="sv1#seu15#oln35#par178" passing="true"/>
       </OKLink>
     </IsNotNullUnit>
-    <DeleteUnit id="sv1#dlu7" name="Delete5" gr:x="1660" gr:y="885" entity="ent7">
+    <DeleteUnit id="sv1#dlu7" name="Delete5" gr:x="1540" gr:y="1005" entity="ent7">
       <Selector id="sv1#dlu7#su49" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#dlu7#su49#kcond33" name="KeyCondition35" predicate="in" implied="false"/>
       </Selector>
@@ -90,7 +92,7 @@
         <LinkParameter id="sv1#seu11#oln29#par124" name="oid_PASSING" source="ent6#att28Array" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="1545" gr:y="165" id="sv1#inn4" name="Is Not Null4" emptyStringAsNull="true">
+    <IsNotNullUnit gr:x="1580" gr:y="140" id="sv1#inn4" name="Is Not Null4" emptyStringAsNull="true">
       <OKLink id="sv1#inn4#oln30" name="OKFlow30" to="sv1#page1#enu12">
         <LinkParameter id="sv1#inn4#oln30#par121" name="contenido_PASSING_contenido" sourceLinkParameter="sv1#seu11#oln29#par120" target="sv1#page1#enu12#fld36_slot"/>
         <LinkParameter id="sv1#inn4#oln30#par125" name="oid_PASSING" sourceLinkParameter="sv1#seu11#oln29#par124" passing="true"/>
@@ -100,7 +102,7 @@
         <LinkParameter id="sv1#inn4#kln4#par119" name="Este comentario pertenece a un usuario que no eres tu, no tienes permiso para modificarlo_Shown Messages" sourceValue="Este comentario pertenece a un usuario que no eres tu, no tienes permiso para modificarlo" target="sv1#page9#mssu3.shownMessages"/>
       </KOLink>
     </IsNotNullUnit>
-    <ModifyUnit gr:x="1490" gr:y="455" id="sv1#mfu6" name="Update6" entity="ent6">
+    <ModifyUnit gr:x="1465" gr:y="345" id="sv1#mfu6" name="Update6" entity="ent6">
       <Selector id="sv1#mfu6#su38" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#mfu6#su38#kcond30" name="KeyCondition30" predicate="in" implied="false"/>
       </Selector>
@@ -113,10 +115,14 @@
         <LinkParameter id="sv1#cru5#oln32#par196" name="false_mostrarFormCrearCom" sourceValue="false" targetVariable="sv1#page1#var5"/>
       </OKLink>
     </CreateUnit>
-    <GetUnit gr:x="1115" gr:y="20" id="sv1#gtu2" name="Get2" contextParameters="UserCtxParam" linkOrder="sv1#gtu2#ln80">
+    <GetUnit gr:x="1795" gr:y="275" id="sv1#gtu2" name="Get2" contextParameters="UserCtxParam" linkOrder="sv1#gtu2#ln80 sv1#gtu2#ln29 sv1#gtu2#ln30">
       <Link id="sv1#gtu2#ln80" name="Flow80" to="sv1#seu11" type="transport" validate="true">
         <LinkParameter id="sv1#gtu2#ln80#par198" name="UserCtxParam.oid_AttCondition9" source="sv1#gtu2.UserCtxParam" target="sv1#seu11#su30#acond9"/>
       </Link>
+      <Link id="sv1#gtu2#ln29" name="Flow29" to="sv1#seu6" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu2#ln29#par24" name="UserCtxParam.oid_usuario" source="sv1#gtu2.UserCtxParam" target="sv1#seu6#su42#acond8"/>
+      </Link>
+      <Link id="sv1#gtu2#ln30" name="Flow30" to="sv1#cru6" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
     <ModifyUnit id="sv1#mfu13" name="RechazarAmistad" gr:x="2710" gr:y="790" entity="ent8">
       <Selector id="sv1#mfu13#su45" defaultPolicy="fill" booleanOperator="and">
@@ -124,7 +130,7 @@
       </Selector>
       <OKLink id="sv1#mfu13#oln43" name="OKFlow23" to="sv1#page14" automaticCoupling="true" gr:bendpoints="169,-39,-76,171"/>
     </ModifyUnit>
-    <CreateUnit id="sv1#cru11" name="CrearAmistad" gr:x="2585" gr:y="320" entity="ent8">
+    <CreateUnit id="sv1#cru11" name="CrearAmistad" gr:x="2680" gr:y="415" entity="ent8">
       <OKLink id="sv1#cru11#oln44" name="OKFlow22" to="sv1#page13" automaticCoupling="true" gr:bendpoints="30,89,135,-121"/>
     </CreateUnit>
     <ModifyUnit id="sv1#mfu14" name="AceptarAmistad" gr:x="2785" gr:y="645" entity="ent8">
@@ -169,5 +175,26 @@
         <LinkParameter id="sv1#miu5#kln11#par211" name="Error al actualizar la valoraci&#243;n de la serie_Shown Messages" sourceValue="Error al actualizar la valoracion de la serie" target="sv1#page10#mssu5.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
+    <SelectorUnit gr:x="1525" gr:y="465" id="sv1#seu6" name="Select Reporte" entity="ent9">
+      <Selector id="sv1#seu6#su42" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#seu6#su42#acond8" name="usuario" predicate="eq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
+        <AttributesCondition id="sv1#seu6#su42#acond10" name="comentario" predicate="eq" booleanOperator="or" implied="false" attributes="rel15#role30.ent6#att28"/>
+      </Selector>
+      <OKLink id="sv1#seu6#oln18" name="OKFlow18" to="sv1#inn6">
+        <LinkParameter id="sv1#seu6#oln18#par128" name="oid_Input" source="ent9#att37Array" target="sv1#inn6.isnotnull"/>
+        <LinkParameter id="sv1#seu6#oln18#par173" name="oid_PASSING" sourceLinkParameter="sv1#page1#inu15#ln25#par171" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="1850" gr:y="585" id="sv1#inn6" name="Is Not Null6" emptyStringAsNull="true">
+      <OKLink id="sv1#inn6#oln20" name="OKFlow20" to="sv1#page8#mssu7">
+        <LinkParameter id="sv1#inn6#oln20#par26" name="YA HAS HECHO UN REPORTE A ESTE COMENTARIO_Shown Messages" sourceValue="YA HAS HECHO UN REPORTE A ESTE COMENTARIO" target="sv1#page8#mssu7.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#inn6#kln18" name="KOFlow17" to="sv1#page11#enu9">
+        <LinkParameter id="sv1#inn6#kln18#par175" name="oid_PASSING" sourceLinkParameter="sv1#seu6#oln18#par173" passing="true"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="1650" gr:y="685" id="sv1#cru6" name="Crear Reporte" entity="ent9">
+      <OKLink id="sv1#cru6#oln24" name="OKFlow24" to="sv1#page1" automaticCoupling="true"/>
+    </CreateUnit>
   </OperationUnits>
 </SiteView>

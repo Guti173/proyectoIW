@@ -70,7 +70,7 @@
         <KeyCondition id="sv1#page1#dau10#su50#kcond36" name="KeyCondition24" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <IndexUnit id="sv1#page1#inu15" name="Comentarios" linkOrder="sv1#page1#inu15#ln61 sv1#page1#inu15#ln66 sv1#page1#inu15#ln43" gr:x="635" gr:y="265" entity="ent6" displayAttributes="ent6#att30 rel10#role20.userName">
+    <IndexUnit id="sv1#page1#inu15" name="Comentarios" linkOrder="sv1#page1#inu15#ln61 sv1#page1#inu15#ln66 sv1#page1#inu15#ln43 sv1#page1#inu15#ln25" gr:x="635" gr:y="265" entity="ent6" displayAttributes="ent6#att30 rel10#role20.userName">
       <Selector id="sv1#page1#inu15#su51" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page1#inu15#su51#rcond10" name="RoleCondition6" predicate="in" implied="false" role="rel11#role21"/>
       </Selector>
@@ -84,8 +84,12 @@
         <LinkParameter id="sv1#page1#inu15#ln66#par177" name="contadorLikes_PASSING" source="data[].ent6#att42" passing="true"/>
       </Link>
       <Link id="sv1#page1#inu15#ln43" name="Modificar comentario" to="sv1#seu11" type="normal" validate="true" automaticCoupling="true"/>
+      <Link id="sv1#page1#inu15#ln25" name="Reportar" to="sv1#seu6" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#inu15#ln25#par21" name="oid_comentario" source="data[].ent6#att28" target="sv1#seu6#su42#acond10"/>
+        <LinkParameter id="sv1#page1#inu15#ln25#par171" name="oid_PASSING" source="data[].ent6#att28" passing="true"/>
+      </Link>
     </IndexUnit>
-    <EntryUnit gr:x="565" gr:y="75" id="sv1#page1#enu12" name="Modificar com" linkOrder="sv1#page1#enu12#ln70" entity="ent6">
+    <EntryUnit gr:x="530" gr:y="110" id="sv1#page1#enu12" name="Modificar com" linkOrder="sv1#page1#enu12#ln70" entity="ent6">
       <Field id="sv1#page1#enu12#fld36" name="contenido" type="text" modifiable="true" preloaded="true" attribute="ent6#att29"/>
       <Link id="sv1#page1#enu12#ln70" name="Modificar" to="sv1#mfu6" type="normal" validate="true">
         <LinkParameter id="sv1#page1#enu12#ln70#par122" name="contenido_contenido" source="sv1#page1#enu12#fld36" target="sv1#mfu6.ent6#att29"/>
@@ -107,6 +111,9 @@
       </Link>
       <Link id="sv1#page1#tmu4#ln82" name="Flow82" to="sv1#mfu6" type="transport" validate="true">
         <LinkParameter id="sv1#page1#tmu4#ln82#par200" name="Current/Input Date_fechaPublicacion" source="currentDate" target="sv1#mfu6.ent6#att30"/>
+      </Link>
+      <Link id="sv1#page1#tmu4#ln39" name="Flow39" to="sv1#cru6" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#tmu4#ln39#par209" name="Current/Input Date_fechaReporte" source="currentDate" target="sv1#cru6.ent9#att39"/>
       </Link>
     </TimeUnit>
   </ContentUnits>
@@ -236,6 +243,7 @@
                 <layout:Link link="sv1#page1#inu15#ln61"/>
                 <layout:Link link="sv1#page1#inu15#ln66"/>
                 <layout:Link link="sv1#page1#inu15#ln43"/>
+                <layout:Link link="sv1#page1#inu15#ln25"/>
               </layout:Unit>
             </layout:Cell>
           </layout:Row>
