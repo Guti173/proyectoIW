@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="A&#241;adir amigo" landmark="true" protected="false" gr:x="480" gr:y="2480">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="A&#241;adir amigo" landmark="true" protected="false" gr:x="2205" gr:y="495">
   <ContentUnits>
     <IndexUnit id="sv1#page13#inu18" name="Usuarios" linkOrder="sv1#page13#inu18#ln83" gr:x="20" gr:y="0" entity="User" displayAttributes="userName User#att1 User#att2">
       <Selector id="sv1#page13#inu18#su44" defaultPolicy="fill" booleanOperator="and">
@@ -18,7 +18,7 @@
       </Link>
       <Link id="sv1#page13#gtu8#ln115" name="Flow115" to="sv1#page13#inu24" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <IndexUnit gr:x="0" gr:y="165" id="sv1#page13#inu24" name="HistorialAmistades" entity="ent8" displayAttributes="ent8#att33 ent8#att34 ent8#att35 ent8#att36 rel16#role32.userOID rel16#role32.userName rel17#role34.userOID rel17#role34.userName">
+    <IndexUnit gr:x="0" gr:y="165" id="sv1#page13#inu24" name="HistorialAmistades" entity="ent8" displayAttributes="ent8#att34 ent8#att35 ent8#att36 rel16#role32.userName rel17#role34.userName">
       <Selector id="sv1#page13#inu24#su55" defaultPolicy="fill" booleanOperator="or">
         <RelationshipRoleCondition id="sv1#page13#inu24#su55#rcond12" name="SolicitanteAmistad" predicate="in" implied="true" role="rel16#role31"/>
         <RelationshipRoleCondition id="sv1#page13#inu24#su55#rcond17" predicate="in" implied="true" name="ReceptroSolicitud" role="rel17#role33"/>
@@ -55,13 +55,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page13#inu24">
-          <layout:Attribute attribute="ent8#att33"/>
           <layout:Attribute attribute="ent8#att34"/>
           <layout:Attribute attribute="ent8#att35" label="Fecha solicitud"/>
           <layout:Attribute attribute="ent8#att36" label="Fecha de respuesta"/>
-          <layout:Attribute attribute="rel16#role32.userOID"/>
           <layout:Attribute attribute="rel16#role32.userName"/>
-          <layout:Attribute attribute="rel17#role34.userOID"/>
           <layout:Attribute attribute="rel17#role34.userName"/>
         </layout:Unit>
       </layout:Cell>

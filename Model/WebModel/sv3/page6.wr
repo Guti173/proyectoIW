@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page6" name="GestionGeneros" gr:x="155" gr:y="775" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page6" name="GestionGeneros" gr:x="680" gr:y="825" landmark="true">
   <ContentUnits>
     <IndexUnit id="sv3#page6#inu5" name="Generos" linkOrder="sv3#page6#inu5#ln8 sv3#page6#inu5#ln21" gr:x="0" gr:y="0" entity="ent2" displayAttributes="ent2#att15 ent2#att16 ent2#att17">
       <Link id="sv3#page6#inu5#ln8" name="Eliminar" to="sv3#dlu1" type="normal" automaticCoupling="true" validate="true"/>

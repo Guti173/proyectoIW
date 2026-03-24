@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page14" name="Solicitudes de amistad" landmark="true" gr:x="1290" gr:y="2565">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page14" name="Solicitudes de amistad" landmark="true" gr:x="3015" gr:y="580">
   <ContentUnits>
-    <IndexUnit id="sv1#page14#inu19" name="ListaAmistades" linkOrder="sv1#page14#inu19#ln88 sv1#page14#inu19#ln89" gr:x="0" gr:y="0" entity="ent8" displayAttributes="ent8#att33 ent8#att34 ent8#att35 ent8#att36 rel17#role34.userOID">
+    <IndexUnit id="sv1#page14#inu19" name="ListaAmistades" linkOrder="sv1#page14#inu19#ln88 sv1#page14#inu19#ln89" gr:x="0" gr:y="0" entity="ent8" displayAttributes="ent8#att34 ent8#att35 ent8#att36">
       <Selector id="sv1#page14#inu19#su46" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page14#inu19#su46#acond16" name="EstadoPendiente" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att34" value="PENDIENTE"/>
         <RelationshipRoleCondition id="sv1#page14#inu19#su46#rcond9" name="soyreceptor" predicate="in" implied="false" role="rel17#role33"/>
@@ -34,11 +34,9 @@
         <layout:Unit unitId="sv1#page14#inu19">
           <layout:Link link="sv1#page14#inu19#ln88"/>
           <layout:Link link="sv1#page14#inu19#ln89"/>
-          <layout:Attribute attribute="ent8#att33"/>
           <layout:Attribute attribute="ent8#att34"/>
           <layout:Attribute attribute="ent8#att35" label="Fecha de solicitud"/>
           <layout:Attribute attribute="ent8#att36" label="Fecha de respuesta"/>
-          <layout:Attribute attribute="rel17#role34.userOID"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

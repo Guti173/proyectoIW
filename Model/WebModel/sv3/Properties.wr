@@ -39,28 +39,28 @@
       </Selector>
       <OKLink id="sv3#mfu3#oln15" name="OKFlow7" to="sv3#seu12" automaticCoupling="true" gr:bendpoints="251,-212,436,173;55,-506,240,-121"/>
     </ModifyUnit>
-    <DeleteUnit id="sv3#dlu1" name="DeleteGenero" gr:x="475" gr:y="645" entity="ent2">
+    <DeleteUnit id="sv3#dlu1" name="DeleteGenero" gr:x="1000" gr:y="695" entity="ent2">
       <Selector id="sv3#dlu1#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu1#su7#kcond5" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#dlu1#oln3" name="OKFlow2" to="sv3#page6" automaticCoupling="true" gr:bendpoints="-57,68,143,-87"/>
     </DeleteUnit>
-    <ModifyUnit id="sv3#mfu1" name="UpdateGenero" gr:x="560" gr:y="985" entity="ent2">
+    <ModifyUnit id="sv3#mfu1" name="UpdateGenero" gr:x="1085" gr:y="1035" entity="ent2">
       <Selector id="sv3#mfu1#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#mfu1#su8#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#mfu1#oln4" name="OKFlow7" to="sv3#page6" automaticCoupling="true" gr:bendpoints="-199,-51,326,129"/>
     </ModifyUnit>
-    <IsNotNullUnit id="sv3#inn1" name="Is Not Null1" gr:x="710" gr:y="910" emptyStringAsNull="true">
+    <IsNotNullUnit id="sv3#inn1" name="Is Not Null1" gr:x="1235" gr:y="960" emptyStringAsNull="true">
       <KOLink id="sv3#inn1#kln2" name="KOFlow1" to="sv3#cru2" automaticCoupling="true"/>
       <OKLink id="sv3#inn1#oln6" name="OKFlow6" to="sv3#mfu1">
         <LinkParameter id="sv3#inn1#oln6#par88" name="Input Value_KeyCondition6 [oid]" source="inputValue" target="sv3#mfu1#su8#kcond6.ent2#att15"/>
       </OKLink>
     </IsNotNullUnit>
-    <CreateUnit id="sv3#cru2" name="CreateGenero" gr:x="650" gr:y="745" entity="ent2">
+    <CreateUnit id="sv3#cru2" name="CreateGenero" gr:x="1175" gr:y="795" entity="ent2">
       <OKLink id="sv3#cru2#oln7" name="OKFlow1" to="sv3#page6" automaticCoupling="true" gr:bendpoints="-149,-59,326,-74"/>
     </CreateUnit>
-    <SelectorUnit id="sv3#seu7" name="Selector2" gr:x="305" gr:y="660" entity="ent2" distinctAttributes="ent2#att15 ent2#att16">
+    <SelectorUnit id="sv3#seu7" name="Selector2" gr:x="830" gr:y="710" entity="ent2" distinctAttributes="ent2#att15 ent2#att16">
       <Selector id="sv3#seu7#su16" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#seu7#su16#kcond14" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
@@ -87,25 +87,25 @@
         <LinkParameter id="sv3#seu12#oln19#par167" name="valoracionMedia_PASSING_valoraci&#243;nMedia" sourceLinkParameter="sv3#seu4#oln16#par157" target="sv3#page3#enu3#fld18_slot"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="sv3#seu3" name="Selector1" gr:x="710" gr:y="1125" entity="ent1">
+    <SelectorUnit id="sv3#seu3" name="Selector1" gr:x="1835" gr:y="120" entity="ent1">
       <Selector id="sv3#seu3#su20" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#seu3#su20#acond3" name="que tenga" predicate="contains" booleanOperator="or" implied="false" attributes="ent1#att6" ignoreCase="true"/>
       </Selector>
       <OKLink id="sv3#seu3#oln8" name="OKFlow1" to="sv3#page7#inu6" automaticCoupling="true"/>
     </SelectorUnit>
-    <DeleteUnit gr:x="380" gr:y="1095" id="sv3#dlu2" name="BorrarComentario" entity="ent6">
+    <DeleteUnit gr:x="1505" gr:y="90" id="sv3#dlu2" name="BorrarComentario" entity="ent6">
       <Selector id="sv3#dlu2#su24" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu2#su24#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#dlu2#oln9" name="OKFlow9" to="sv3#page7" automaticCoupling="true"/>
     </DeleteUnit>
-    <DeleteUnit gr:x="100" gr:y="1365" id="sv3#dlu4" name="DesestimarReporte" entity="ent9">
+    <DeleteUnit gr:x="1225" gr:y="360" id="sv3#dlu4" name="DesestimarReporte" entity="ent9">
       <Selector id="sv3#dlu4#su25" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu4#su25#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#dlu4#oln14" name="OKFlow14" to="sv3#page7" automaticCoupling="true"/>
     </DeleteUnit>
-    <ModifyUnit gr:x="10" gr:y="1135" id="sv3#mfu4" name="AceptarReporte" entity="ent9">
+    <ModifyUnit gr:x="1135" gr:y="130" id="sv3#mfu4" name="AceptarReporte" entity="ent9">
       <Selector id="sv3#mfu4#su26" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#mfu4#su26#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel15#role30.ent6#att28"/>
       </Selector>
